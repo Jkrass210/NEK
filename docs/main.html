@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Главная</title>
+  <link href="css/normalize.min.css?_v=20250812123333" rel="stylesheet">
+  <link href="css/swiper-bundle.min.css?_v=20250812123333" rel="stylesheet">
+  <link href="css/style.css?_v=20250812123333" rel="stylesheet">
+
+  <script>
+    window.addEventListener('load', function () {
+      document.body.classList.remove('loading');
+      document.getElementById('preloader').style.display = 'none';
+    });
+  </script>
+
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=93db7d8d-d126-4f79-9f10-621804bddd7f&lang=ru_RU&_v=20250812123333"></script>
+  
+  <script src="js/jquery-3.6.0.min.js?_v=20250812123333" defer></script>
+  <script src="js/jquery.validate.min.js?_v=20250812123333" defer></script>
+  <script src="js/additional-methods.min.js?_v=20250812123333" defer></script>
+  <script src="js/cleave.js?_v=20250812123333" defer></script>
+  <script src="js/swiper-bundle.min.js?_v=20250812123333" defer></script>
+  <script src="js/fslightbox.js?_v=20250812123333" defer></script>
+  <script type="module" src="js/main.js?_v=20250812123333"></script>
+</head>
+
+<body>
+  <div id="preloader">
+  <div class="loader"></div>
+</div>
+  <header class="header" id="header">
+  <div class="header__container container">
+    <div class="header__content">
+      <div class="header__left">
+        <ul class="box-logo list-reset">
+  <li>
+    <a href="/">
+      <svg width="169" height="32" viewBox="0 0 169 32" fill="none">
+        <use xlink:href="img/sprite.svg#mainLogo"></use>
+      </svg>
+    </a>
+  </li>
+  <li>
+    <a href="/">
+      <svg width="104" height="34" viewBox="0 0 104 34" fill="none">
+        <use xlink:href="img/sprite.svg#nekLogo"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+        <div class="header__box-nav" for-open="burger">
+          <div class="header__mobail-box"></div>
+          <nav class="header__nav">
+            <ul class="header__list list-reset">
+              <li>
+                <a class="nav-link" href="#">О предприятии</a>
+              </li>
+              <li>
+                <div class="drop-down-1">
+  <button class="drop-down-1__btn btn-reset">
+    <span>Продукция</span>
+    <svg width="7" height="4" viewBox="0 0 7 4" fill="none">
+      <use xlink:href="img/sprite.svg#arrowDrop1"></use>
+    </svg>
+  </button>
+  <div class="drop-down-1__box">
+    <button class="drop-down-1__btn-back btn-reset">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <use xlink:href="img/sprite.svg#arrowBackMenu"></use>
+      </svg>
+      <span>Назад в меню</span>
+    </button>
+    <ul class="drop-down-1__list list-reset">
+      <li>
+        <a class="nav-link" href="#">Приборы учета электрической энергии</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#">Счетчики воды</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#">Приборы учёта газа</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#">Коммуникационное оборудование</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#">Зарядные станции</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#">Микроконтроллеры</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#">Вспомогательные устройства</a>
+      </li>
+    </ul>
+  </div>
+</div>
+              </li>
+              <li>
+                <a class="nav-link" href="#">Пресс-центр</a>
+              </li>
+              <li>
+                <a class="nav-link" href="#">Карьера</a>
+              </li>
+              <li>
+                <a class="nav-link" href="#">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+      <div class="header__right">
+        <div class="switcher">
+  <label class="switcher__label">
+    <input class="switcher__input" type="checkbox" id="languageTogg">
+    <span class="switcher__status">
+      <i>Ru</i>
+      <i>En</i>
+    </span>
+  </label>
+</div>
+        <button class="burger btn-reset" id="burger">
+  <span class="burger__icon">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+      <use xlink:href="img/sprite.svg#burger"></use>
+    </svg>
+  </span>
+
+  <span class="burger__close">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+      <use xlink:href="img/sprite.svg#burgerClose"></use>
+    </svg>
+  </span>
+</button>
+      </div>
+    </div>
+  </div>
+</header>
+  <main class="main">
+    <section class="box-hero">
+  <div class="box-hero__img-wrapper">
+    <picture>
+      <source srcset="img/box-hero/banner360.webp" media="(max-width: 550px)" type="image/webp">
+      <source srcset="img/box-hero/banner360.jpg" media="(max-width: 550px)">
+      <source srcset="img/box-hero/banner.webp" type="image/webp">
+      <img class="box-hero__img" src="img/box-hero/banner.jpg" alt="img" loading="lazy">
+    </picture>
+    <!--<picture><source srcset="img/box-hero/banner.webp" type="image/webp"><img class="box-hero__img" src="img/box-hero/banner.jpg" alt="img"></picture>-->
+    <div class="box-hero__container container">
+      <div class="box-hero__content">
+        <h1 class="hidden">средства измерения</h1>
+        <h2 class="box-hero__title">Ведущий производитель интеллектуальных средств измерения, управления и
+          радиоэлектроники</h2>
+      </div>
+    </div>
+  </div>
+</section>
+    <section class="box-preview-catalog">
+  <div class="box-preview-catalog__container container">
+    <div class="box-preview-catalog__content">
+      <div class="box-preview-catalog__line-top">
+        <h2 class="box-preview-catalog__title section-title">
+          Каталог продукции
+        </h2>
+        <a href="#" class="link-all">
+          <span class="text">Смотреть все</span>
+        </a>
+      </div>
+      <ul class="box-preview-catalog__list list-reset">
+        <li>
+          <div class="card-product">
+  <a href="#" class="card-product__link">
+    <span class="name">Приборы учета электрической энергии</span>
+    <picture><source srcset="img/card-product/1.webp" type="image/webp"><img src="img/card-product/1.png" alt="img"></picture>
+  </a>
+</div>
+        </li>
+        <li>
+          <div class="card-product">
+  <a href="#" class="card-product__link">
+    <span class="name">Коммуникационное оборудование</span>
+    <picture><source srcset="img/card-product/2.webp" type="image/webp"><img src="img/card-product/2.png" alt="img"></picture>
+  </a>
+</div>
+        </li>
+        <li>
+          <div class="card-product">
+  <a href="#" class="card-product__link">
+    <span class="name">Зарядные станции</span>
+    <picture><source srcset="img/card-product/3.webp" type="image/webp"><img src="img/card-product/3.png" alt="img"></picture>
+  </a>
+</div>
+        </li>
+        <li>
+          <div class="card-product">
+  <a href="#" class="card-product__link">
+    <span class="name">Приборы учета воды</span>
+    <picture><source srcset="img/card-product/4.webp" type="image/webp"><img src="img/card-product/4.png" alt="img"></picture>
+  </a>
+</div>
+        </li>
+        <li>
+          <div class="card-product">
+  <a href="#" class="card-product__link">
+    <span class="name">Приборы учёта газа</span>
+    <picture><source srcset="img/card-product/5.webp" type="image/webp"><img src="img/card-product/5.png" alt="img"></picture>
+  </a>
+</div>
+        </li>
+        <li>
+          <div class="card-product">
+  <a href="#" class="card-product__link">
+    <span class="name">Микроконтроллеры</span>
+    <picture><source srcset="img/card-product/6.webp" type="image/webp"><img src="img/card-product/6.png" alt="img"></picture>
+  </a>
+</div>
+        </li>
+        <li>
+          <div class="card-product lest-card-product">
+            <a href="#" class="card-product__link">
+              <span class="name">Вспомогательные устройства</span>
+              <picture><source srcset="@@urlImg" type="image/webp"><img src="@@urlImg" alt="img"></picture>
+            </a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+    <section class="box-news">
+  <div class="box-news__container container">
+    <div class="box-news__line-top section-line-top">
+      <h2 class="box-news__title section-title">Новости</h2>
+      <a href="#" class="link-all">
+        <span class="text">Смотреть все</span>
+      </a>
+    </div>
+  </div>
+  <div class="container-swiper">
+    <div class="box-news__swiper">
+      <div class="news-swiper swiper">
+  <button class="btn-reset swiper-btn swiper-btn-next">
+  <svg width="18" height="12" viewBox="0 0 18 12" fill="none">
+    <use xlink:href="img/sprite.svg#arrSwBtNext"></use>
+  </svg>
+</button>
+  <span class="news-swiper__btn-shadow"></span>
+  <ul class="swiper-wrapper list-reset">
+    <li class="swiper-slide">
+      <div class="card-news">
+  <a href="#" class="card-news__link">
+    <span class="card-news__box-img">
+      <picture><source srcset="img/card-news/1.webp" type="image/webp"><img src="img/card-news/1.jpg" alt="img"></picture>
+      <span class="card-news__box-time">
+        <time datetime="22 мая 2025">22 мая 2025</time>
+      </span>
+    </span>
+    <h3 class="card-news__title">
+      «НАРТИС» — в числе крупнейших компаний Вологодской области
+    </h3>
+  </a>
+</div>
+    </li>
+    <li class="swiper-slide">
+      <div class="card-news">
+  <a href="#" class="card-news__link">
+    <span class="card-news__box-img">
+      <picture><source srcset="img/card-news/2.webp" type="image/webp"><img src="img/card-news/2.jpg" alt="img"></picture>
+      <span class="card-news__box-time">
+        <time datetime="15 мая 2025">15 мая 2025</time>
+      </span>
+    </span>
+    <h3 class="card-news__title">
+      «НАРТИС» подписал соглашение о сотрудничестве с «ДАВН»
+    </h3>
+  </a>
+</div>
+    </li>
+    <li class="swiper-slide">
+      <div class="card-news">
+  <a href="#" class="card-news__link">
+    <span class="card-news__box-img">
+      <picture><source srcset="img/card-news/3.webp" type="image/webp"><img src="img/card-news/3.jpg" alt="img"></picture>
+      <span class="card-news__box-time">
+        <time datetime="09 мая 2025">09 мая 2025</time>
+      </span>
+    </span>
+    <h3 class="card-news__title">
+      С Днем Победы!
+    </h3>
+  </a>
+</div>
+    </li>
+    <li class="swiper-slide">
+      <div class="card-news">
+  <a href="#" class="card-news__link">
+    <span class="card-news__box-img">
+      <picture><source srcset="img/card-news/4.webp" type="image/webp"><img src="img/card-news/4.jpg" alt="img"></picture>
+      <span class="card-news__box-time">
+        <time datetime="05 мая 2025">05 мая 2025</time>
+      </span>
+    </span>
+    <h3 class="card-news__title">
+      «НАРТИС» оказал поддержку проекту «Сирень Победы»
+    </h3>
+  </a>
+</div>
+    </li>
+    <li class="swiper-slide">
+      <div class="card-news">
+  <a href="#" class="card-news__link">
+    <span class="card-news__box-img">
+      <picture><source srcset="img/card-news/2.webp" type="image/webp"><img src="img/card-news/2.jpg" alt="img"></picture>
+      <span class="card-news__box-time">
+        <time datetime="15 мая 2025">15 мая 2025</time>
+      </span>
+    </span>
+    <h3 class="card-news__title">
+      «НАРТИС» подписал соглашение о сотрудничестве с «ДАВН»
+    </h3>
+  </a>
+</div>
+    </li>
+    <li class="swiper-slide">
+      <div class="card-news">
+  <a href="#" class="card-news__link">
+    <span class="card-news__box-img">
+      <picture><source srcset="img/card-news/1.webp" type="image/webp"><img src="img/card-news/1.jpg" alt="img"></picture>
+      <span class="card-news__box-time">
+        <time datetime="22 мая 2025">22 мая 2025</time>
+      </span>
+    </span>
+    <h3 class="card-news__title">
+      «НАРТИС» — в числе крупнейших компаний Вологодской области
+    </h3>
+  </a>
+</div>
+    </li>
+    <li class="swiper-slide">
+      <div class="card-news">
+  <a href="#" class="card-news__link">
+    <span class="card-news__box-img">
+      <picture><source srcset="img/card-news/1.webp" type="image/webp"><img src="img/card-news/1.jpg" alt="img"></picture>
+      <span class="card-news__box-time">
+        <time datetime="22 мая 2025">22 мая 2025</time>
+      </span>
+    </span>
+    <h3 class="card-news__title">
+      «НАРТИС» — в числе крупнейших компаний Вологодской области
+    </h3>
+  </a>
+</div>
+    </li>
+    <li class="swiper-slide">
+      <div class="card-news">
+  <a href="#" class="card-news__link">
+    <span class="card-news__box-img">
+      <img src="" alt="img">
+      <span class="card-news__box-time">
+        <time datetime="22 мая 2025">22 мая 2025</time>
+      </span>
+    </span>
+    <h3 class="card-news__title">
+      «НАРТИС» — в числе крупнейших компаний Вологодской области
+    </h3>
+  </a>
+</div>
+    </li>
+  </ul>
+  <button class="btn-reset swiper-btn swiper-btn-prev">
+  <svg width="18" height="12" viewBox="0 0 18 12" fill="none">
+    <use xlink:href="img/sprite.svg#arrSwBtPrev"></use>
+  </svg>
+</button>
+  <span class="news-swiper__btn-shadow"></span>
+</div>
+    </div>
+  </div>
+</section>
+    <section class="box-counter">
+  <div class="box-counter__container container">
+    <div class="box-counter__content">
+      <ul class="box-counter__list list-reset">
+        <li>
+          <div class="card-counter">
+            <span class="card-counter__box-img">
+              <img class="card-counter__img" src="img/box-counter/1.svg" alt="svg">
+            </span>
+            <div class="counter">
+              <p class="counter__number hide">700<span>сотрудников</span></p>
+              <p class="counter__number number">0<span>сотрудников</span></p>
+              <span class="counter__desc">Специалистов и профессионалов в своих областях деятельности и производства</span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="card-counter">
+            <span class="card-counter__box-img">
+              <img class="card-counter__img" src="img/box-counter/2.svg" alt="svg">
+            </span>
+            <div class="counter">
+              <p class="counter__number hide">2.5<span>млн</span></p>
+              <p class="counter__number number">0<span>млн</span></p>
+              <span class="counter__desc">Приборов учета в год —производственная мощность предприятия</span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="card-counter">
+            <span class="card-counter__box-img">
+              <img class="card-counter__img" src="img/box-counter/3.svg" alt="svg">
+            </span>
+            <div class="counter">
+              <p class="counter__number hide">6300<span>м²</span></p>
+              <p class="counter__number number">0<span>м²</span></p>
+              <span class="counter__desc">Общая площадь производственных помещений</span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="card-counter">
+            <span class="card-counter__box-img">
+              <img class="card-counter__img" src="img/box-counter/4.svg" alt="svg">
+            </span>
+            <div class="counter">
+              <p class="counter__number hide">8<span>этапов</span></p>
+              <p class="counter__number number">0<span>этапов</span></p>
+              <span class="counter__desc">Общая площадь производственных помещений</span>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+    <section class="box-about">
+  <div class="box-about__conrainer container">
+    <div class="box-about__line-top section-line-top">
+      <h2 class="box-about__title section-title">
+        О компании
+      </h2>
+      <a href="#" class="box-about__link-all link-all">
+        <span class="text">Читать полностью</span>
+      </a>
+    </div>
+    <div class="box-about__content">
+      <div class="top">
+        <p>Лидер по производству интеллектуальных приборов учёта. Разрабатываем и выпускаем высокотехнологичное оборудование, способствующее модернизации энергетической инфраструктуры страны.</p>
+        <p>Основные продукты «НАРТИС»:</p>
+        <ul>
+          <li>
+            Однофазные и трехфазные (прямого, полукосвенного и косвенного включения) интеллектуальные приборы учёта электроэнергии, которые соответствуют требованиям ФЗ-552 и постановления Правительства РФ «Об утверждении правил предоставления доступа к минимальному набору функций ИСУ электрической энергии (мощности)»
+          </li>
+          <li>
+            Однофазные и трехфазные приборы учёта электроэнергии в исполнении СПЛИТ, которые соответствуют требованиям ФЗ-552 и постановления Правительства РФ «Об утверждении правил предоставления доступа к минимальному набору функций ИСУ электрической энергии (мощности)»
+          </li>
+          <li>
+            Зарядные станции и интеллектуальные счетчики воды и газа
+          </li>
+          <li>
+            Коммуникационные модули и шлюзы, роутеры, устройства сбора и передачи данных.
+          </li>
+          <li>
+            Микроконтроллеры и микросхемы внешнего аналогового интерфейса для применения в составе выпускаемой продукции.
+          </li>
+        </ul>
+      </div>
+      <div class="bottom">
+        <div class="about-swiper">
+  <div class="about-swiper-top swiper">
+    <div class="about-swiper-top__btn-group">
+      <button class="btn-reset swiper-btn swiper-btn-next">
+  <svg width="18" height="12" viewBox="0 0 18 12" fill="none">
+    <use xlink:href="img/sprite.svg#arrSwBtNext"></use>
+  </svg>
+</button>
+      <button class="btn-reset swiper-btn swiper-btn-prev">
+  <svg width="18" height="12" viewBox="0 0 18 12" fill="none">
+    <use xlink:href="img/sprite.svg#arrSwBtPrev"></use>
+  </svg>
+</button>
+    </div>
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="about-swiper-top-wrapp">
+          <!--<picture><source srcset="img/box-about/1.webp" type="image/webp"><img class="about-swiper-top-wrapp__img" src="img/box-about/1.jpg" loading="lazy" alt="img"></picture>-->
+          <video autoplay muted preload="none" playsinline loading="lazy">
+            <source src="video/video.mp4" type="video/mp4">
+            <source src="video/video1.webm" type="video/webm">
+            Ваш браузер не поддерживает видео.
+          </video>
+        </div>
+      </div>
+      <!--<div class="swiper-slide">
+        <div class="about-swiper-top-wrapp">
+          <iframe src="https://vkvideo.ru/video_ext.php?oid=-137289250&id=456241954&hd=2&autoplay=1" width="853" height="480" allow="fullscreen; encrypted-media; picture-in-picture; screen-wake-lock;" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>-->
+      <div class="swiper-slide">
+        <div class="about-swiper-top-wrapp">
+          <picture><source srcset="img/box-about/3.webp" type="image/webp"><img class="about-swiper-top-wrapp__img" src="img/box-about/3.jpg" loading="lazy" alt="img"></picture>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="about-swiper-top-wrapp">
+          <picture><source srcset="img/box-about/2.webp" type="image/webp"><img class="about-swiper-top-wrapp__img" src="img/box-about/2.jpg" loading="lazy" alt="img"></picture>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="about-swiper-top-wrapp">
+          <picture><source srcset="img/box-about/1.webp" type="image/webp"><img class="about-swiper-top-wrapp__img" src="img/box-about/1.jpg" loading="lazy" alt="img"></picture>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="about-swiper-top-wrapp">
+          <picture><source srcset="img/box-about/1.webp" type="image/webp"><img class="about-swiper-top-wrapp__img" src="img/box-about/1.jpg" loading="lazy" alt="img"></picture>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="about-swiper-top-wrapp">
+          <picture><source srcset="img/box-about/1.webp" type="image/webp"><img class="about-swiper-top-wrapp__img" src="img/box-about/1.jpg" loading="lazy" alt="img"></picture>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="about-swiper-bottom swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="about-swiper-bottom-wrapp">
+          <video autoplay muted preload="none" playsinline loading="lazy">
+            <source src="video/video.mp4" type="video/mp4">
+            <source src="video/video1.webm" type="video/webm">
+            Ваш браузер не поддерживает видео.
+          </video>
+          <!--<picture><source srcset="img/box-about/1.webp" type="image/webp"><img class="about-swiper-bottom-wrapp__img" src="img/box-about/1.jpg" loading="lazy" alt="img"></picture>-->
+        </div>
+      </div>
+      <!--<div class="swiper-slide">
+        <div class="about-swiper-bottom-wrapp">
+          <iframe src="https://vkvideo.ru/video_ext.php?oid=-137289250&id=456241954&hd=2&autoplay=1" width="853" height="480" allow="fullscreen; encrypted-media; picture-in-picture; screen-wake-lock;" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>-->
+      <div class="swiper-slide">
+        <div class="about-swiper-bottom-wrapp">
+          <picture><source srcset="img/box-about/3.webp" type="image/webp"><img class="about-swiper-bottom-wrapp__img" src="img/box-about/3.jpg" loading="lazy" alt="img"></picture>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="about-swiper-bottom-wrapp">
+          <picture><source srcset="img/box-about/2.webp" type="image/webp"><img class="about-swiper-bottom-wrapp__img" src="img/box-about/2.jpg" loading="lazy" alt="img"></picture>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="about-swiper-bottom-wrapp">
+          <picture><source srcset="img/box-about/1.webp" type="image/webp"><img class="about-swiper-bottom-wrapp__img" src="img/box-about/1.jpg" loading="lazy" alt="img"></picture>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="about-swiper-bottom-wrapp">
+          <picture><source srcset="img/box-about/1.webp" type="image/webp"><img class="about-swiper-bottom-wrapp__img" src="img/box-about/1.jpg" loading="lazy" alt="img"></picture>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="about-swiper-bottom-wrapp">
+          <picture><source srcset="img/box-about/1.webp" type="image/webp"><img class="about-swiper-bottom-wrapp__img" src="img/box-about/1.jpg" loading="lazy" alt="img"></picture>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      </div>
+    </div>
+    <div class="box-about__mobil-wrapper-link"></div>
+  </div>
+</section>
+    <section class="box-partners">
+  <div class="box-partners__container container">
+    <div class="box-partners__content">
+      <div class="box-partners__line-top section-line-top">
+        <h2 class="box-partners__title section-title">
+          Наши партнеры
+        </h2>
+      </div>
+      <div class="partners-swiper swiper">
+        <button class="btn-reset swiper-btn swiper-btn-next">
+  <svg width="18" height="12" viewBox="0 0 18 12" fill="none">
+    <use xlink:href="img/sprite.svg#arrSwBtNext"></use>
+  </svg>
+</button>
+        <span class="partners-swiper__btn-shadow"></span>
+        <ul class="swiper-wrapper list-reset">
+          <li class="swiper-slide">
+            <div class="card-partner">
+              <picture><source srcset="img/box-partners/1.webp" type="image/webp"><img src="img/box-partners/1.png" alt="img"></picture>
+            </div>
+          </li>
+          <li class="swiper-slide">
+            <div class="card-partner">
+              <picture><source srcset="img/box-partners/2.webp" type="image/webp"><img src="img/box-partners/2.png" alt="img"></picture>
+            </div>
+          </li>
+          <li class="swiper-slide">
+            <div class="card-partner">
+              <picture><source srcset="img/box-partners/3.webp" type="image/webp"><img src="img/box-partners/3.png" alt="img"></picture>
+            </div>
+          </li>
+          <li class="swiper-slide">
+            <div class="card-partner">
+              <picture><source srcset="img/box-partners/4.webp" type="image/webp"><img src="img/box-partners/4.png" alt="img"></picture>
+            </div>
+          </li>
+          <li class="swiper-slide">
+            <div class="card-partner">
+              <picture><source srcset="img/box-partners/5.webp" type="image/webp"><img src="img/box-partners/5.png" alt="img"></picture>
+            </div>
+          </li>
+          <li class="swiper-slide">
+            <div class="card-partner">
+              <picture><source srcset="img/box-partners/2.webp" type="image/webp"><img src="img/box-partners/2.png" alt="img"></picture>
+            </div>
+          </li>
+        </ul>
+        <button class="btn-reset swiper-btn swiper-btn-prev">
+  <svg width="18" height="12" viewBox="0 0 18 12" fill="none">
+    <use xlink:href="img/sprite.svg#arrSwBtPrev"></use>
+  </svg>
+</button>
+        <span class="partners-swiper__btn-shadow"></span>
+      </div>
+    </div>
+  </div>
+</section>
+  </main>
+  <footer class="footer" id="footer">
+  <div class="footer__container container">
+    <div class="footer__line-top">
+      <ul class="box-logo list-reset">
+  <li>
+    <a href="/">
+      <svg width="169" height="32" viewBox="0 0 169 32" fill="none">
+        <use xlink:href="img/sprite.svg#mainLogo"></use>
+      </svg>
+    </a>
+  </li>
+  <li>
+    <a href="/">
+      <svg width="104" height="34" viewBox="0 0 104 34" fill="none">
+        <use xlink:href="img/sprite.svg#nekLogo"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+      <!--
+      тут не совсем понятно что делать с меню, если это будет один компонент с тем что в хедере то можно вставить разметку из хедера, но тогда не понятно что делать с пыавдающим списком. Спили прописаны на оба меню (на меню из хедера и на новое которое только к футеру относится)
+      -->
+      <!--
+      <nav class="header__nav">
+        <ul class="header__list list-reset">
+          <li>
+            <a class="nav-link" href="#">О предприятии</a>
+          </li>
+          <li>
+            <div class="drop-down-1">
+  <button class="drop-down-1__btn btn-reset">
+    <span>Продукция</span>
+    <svg width="7" height="4" viewBox="0 0 7 4" fill="none">
+      <use xlink:href="img/sprite.svg#arrowDrop1"></use>
+    </svg>
+  </button>
+  <div class="drop-down-1__box">
+    <button class="drop-down-1__btn-back btn-reset">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <use xlink:href="img/sprite.svg#arrowBackMenu"></use>
+      </svg>
+      <span>Назад в меню</span>
+    </button>
+    <ul class="drop-down-1__list list-reset">
+      <li>
+        <a class="nav-link" href="#">Приборы учета электрической энергии</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#">Счетчики воды</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#">Приборы учёта газа</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#">Коммуникационное оборудование</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#">Зарядные станции</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#">Микроконтроллеры</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#">Вспомогательные устройства</a>
+      </li>
+    </ul>
+  </div>
+</div>
+          </li>
+          <li>
+            <a class="nav-link" href="#">Пресс-центр</a>
+          </li>
+          <li>
+            <a class="nav-link" href="#">Карьера</a>
+          </li>
+          <li>
+            <a class="nav-link" href="#">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+      -->
+
+      <nav class="footer__nav">
+        <ul class="footer__list list-reset">
+          <li>
+            <a class="nav-link" href="#">О предприятии</a>
+          </li>
+          <li>
+            <a class="nav-link" href="#">Продукция</a>
+          </li>
+          <li>
+            <a class="nav-link" href="#">Пресс-центр</a>
+          </li>
+          <li>
+            <a class="nav-link" href="#">Карьера</a>
+          </li>
+          <li>
+            <a class="nav-link" href="#">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+
+
+      <address class="footer__box-address">
+        <h3 class="footer__caption">
+          Производство:
+        </h3>
+        <a href="https://yandex.ru/maps/968/cherepovets/house/severnoye_shosse_40v/Z04YfgZgSUUOQFtjfX13cXlrZg==/?ll=37.810010%2C59.160582&z=17.3"
+          class="footer__top-link">
+          Вологодская область, г. Череповец, Северное шоссе, 40В
+        </a>
+      </address>
+
+    </div>
+    <div class="footer__line-bottom">
+      <div class="footer__bottom-left">
+        <p class="footer__desc">
+          © 2025
+        </p>
+        <a href="#" class="footer__bottom-link">
+          Все права защищены
+        </a>
+        <a href="#" class="footer__bottom-link">
+          Политика в области обработки персональных данных
+        </a>
+      </div>
+      <div class="footer__bottom-right">
+        <a href="https://x2digital.ru/" class="linkX2">
+          <svg width="144" height="28" viewBox="0 0 144 28" fill="none">
+            <use xlink:href="img/sprite.svg#x2"></use>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

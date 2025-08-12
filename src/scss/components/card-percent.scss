@@ -1,0 +1,27 @@
+.card-percent {
+  height: 100%;
+  padding: 24px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  &__top {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 106%;
+    color: var(--orange);
+  }
+  &__title {
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 100%;
+    color: var(--orange);
+  }
+}
+
+@media (max-width: 550px) {
+  .card-percent {
+    padding: 12px 10px 12px 0;
+  }
+}

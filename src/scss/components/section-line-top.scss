@@ -1,0 +1,19 @@
+.section-line-top {
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+@media (max-width: 1100px) {
+  .section-line-top {
+    margin-bottom: 23px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .section-line-top {
+    margin-bottom: 20px;
+  }
+}

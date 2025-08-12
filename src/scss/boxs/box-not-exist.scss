@@ -1,0 +1,132 @@
+.box-not-exist {
+  padding-top: 116px;
+  &__title {
+    display: none;
+  }
+  &__content {
+    padding-top: 320px;
+    padding-bottom: 295px;
+    display: flex;
+    gap: calc(84 / 1368 * 100%);
+    align-items: start;
+    .top {
+      width: calc(504 / 1368 * 100%);
+      picture {
+        display: flex;
+      }
+    }
+    .bottom {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+
+      &__desc {
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 130%;
+        color: #2d2d2b;
+      }
+
+      &__btn-group {
+        display: flex;
+        gap: 12px;
+      }
+    }
+  }
+  &__btn {
+    border-radius: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    min-width: 223px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--white);
+    background-color: var(--orange);
+    transition: color 0.4s ease-in-out, background-color 0.4s ease-in-out;
+    &:focus,&:focus-visible {
+      outline: none;
+    }
+    &:focus-visible,&:hover,&:active {
+      color: var(--orange);
+      background-color: var(--orange-light);
+    }
+    &.catalog {
+      color: var(--orange);
+      background-color: var(--orange-light);
+      &:focus-visible,&:hover,&:active {
+        color: var(--white);
+        background-color: var(--orange);
+      }
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .box-not-exist {
+    &__content {
+      padding-top: 183px;
+      padding-bottom: 261px;
+      flex-direction: column;
+      gap: 40px;
+
+      .top{
+        width: calc(404 / 976 * 100%);
+      }
+
+      .bottom {
+        max-width: 750px;
+
+        &__desc {
+          font-size: 18px;
+          line-height: 133%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .box-not-exist {
+    &__content {
+      .top{
+        min-width: 201px;
+      }
+      .bottom {
+        &__btn-group {
+          flex-wrap: wrap;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .box-not-exist {
+    &__content {
+      padding-top: 104px;
+      padding-bottom: 144px;
+      gap: 24px;
+
+
+      .bottom {
+        gap: 28px;
+        &__desc {
+          font-size: 16px;
+          line-height: 131%;
+        }
+        &__btn-group {
+          gap: 6px;
+        }
+      }
+    }
+    &__btn {
+      min-width: 100%;
+    }
+  }
+}

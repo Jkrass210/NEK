@@ -1,0 +1,70 @@
+.btn-switching-list {
+  padding-top: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+
+  &__link {
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    min-width: 56px;
+    height: 56px;
+    background-color: var(--gray-150);
+    color: var(--black);
+    transition: color 0.4s ease-in-out, background-color 0.4s ease-in-out;
+
+    &.active {
+      color: var(--white);
+      background-color: var(--orange);
+    }
+
+    &:focus,&:focus-visible {
+      outline: none;
+    }
+
+    &:focus-visible,&:hover,&:active {
+      color: var(--white);
+      background-color: var(--orange);
+    }
+  }
+
+  &__group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .btn-switching-list {
+    padding-top: 28px;
+    &__link {
+      width: 52px;
+      min-width: 52px;
+      height: 52px;
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .btn-switching-list {
+    padding-top: 18px;
+    gap: 4px;
+    &__group {
+      gap: 4px;
+      ///////нужно будет удалить
+      a:last-child {
+        display: none;
+      }
+      ///////нужно будет удалить
+    }
+    .switching-link {
+      width: 100%;
+    }
+  }
+}

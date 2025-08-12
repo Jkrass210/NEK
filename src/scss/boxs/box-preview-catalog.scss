@@ -1,0 +1,132 @@
+.box-preview-catalog {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 114px;
+
+  &__content {
+    position: relative;
+    border-radius: 20px;
+    padding: 44px;
+    background-color: var(--white);
+
+    &::before {
+      content: "";
+      position: absolute;
+      border-radius: 20px;
+      z-index: -1;
+      inset: -10px;
+      background-color: var(--gray-100);
+    }
+  }
+
+  &__line-top {
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+
+    li {
+      height: auto;
+
+      &:last-child {
+        grid-column: 1 / -1;
+
+        .card-product {
+          min-height: 100%;
+
+          .card-product__link {
+            justify-content: center;
+
+            &::before {
+              background-position: bottom -80px right -150px;
+              background-image: url('../img/arrows/linkBg2.svg');
+            }
+
+            &::after {
+              display: none;
+            }
+
+            .name {
+              max-width: 100%;
+              text-align: center;
+            }
+          }
+
+          picture {
+            display: none;
+          }
+
+          img {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .box-preview-catalog {
+    margin-bottom: 104px;
+    &__content {
+      padding: 32px;
+      &::before {
+        inset: -8px;
+      }
+    }
+    &__line-top {
+      margin-bottom: 23px;
+    }
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .box-preview-catalog {
+    margin-bottom: 80px;
+    &__content {
+      padding: 20px;
+      &::before {
+        inset: -6px;
+      }
+    }
+    &__line-top {
+      justify-content: center;
+      margin-bottom: 20px;
+      .link-all {
+        display: none;
+      }
+    }
+    &__list {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .box-preview-catalog {
+    &__list {
+      gap: 8px;
+      li {
+        &:last-child {
+          .card-product {
+            .card-product__link {
+              .name {
+                text-align: start;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

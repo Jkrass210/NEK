@@ -1,0 +1,133 @@
+.card-development {
+  height: 100%;
+  display: flex;
+  gap: 24px;
+  flex-direction: column;
+
+  &__box-img {
+    display: flex;
+    border-radius: 20px;
+    overflow: hidden;
+    height: 200px;
+
+    picture {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__box-desc {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 141%;
+    color: var(--black);
+
+    h3 {
+      font-family: var(--font-family);
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 130%;
+      color: var(--black);
+    }
+
+    p {
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: 17px;
+      line-height: 141%;
+      color: var(--black);
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding-left: 44px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: 17px;
+      line-height: 141%;
+      color: var(--black);
+
+      li {
+        position: relative;
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 141%;
+        color: var(--black);
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 11px;
+          left: -36px;
+          border-radius: 50px;
+          width: 24px;
+          min-width: 24px;
+          height: 2px;
+          background-color: var(--orange);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .card-development {
+    gap: 20px;
+
+    &__box-desc {
+      gap: 16px;
+
+      h3 {
+        font-size: 18px;
+        line-height: 133%;
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .card-development {
+    flex-direction: column-reverse;
+  }
+}
+
+@media (max-width: 550px) {
+  .card-development {
+    gap: 12px;
+    &__box-desc {
+      gap: 12px;
+      font-size: 16px;
+      line-height: 131%;
+
+      h3 {
+        font-size: 18px;
+        line-height: 133%;
+      }
+
+      ul {
+        gap: 8px;
+        li {
+          font-size: 16px;
+          line-height: 131%;
+        }
+      }
+
+    }
+  }
+}

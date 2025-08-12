@@ -1,0 +1,19 @@
+@media (max-width: 1100px) {
+  .box-equipment-desc {
+    .box-about__content {
+      .top {
+        gap: 16px;
+      }
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .box-equipment-desc {
+    .box-about__content {
+      .top {
+        gap: 12px;
+      }
+    }
+  }
+}

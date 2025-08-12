@@ -1,0 +1,83 @@
+<footer class="footer" id="footer">
+  <div class="footer__container container">
+    <div class="footer__line-top">
+      @@include('./box-logo.html')
+      <!--
+      тут не совсем понятно что делать с меню, если это будет один компонент с тем что в хедере то можно вставить разметку из хедера, но тогда не понятно что делать с пыавдающим списком. Спили прописаны на оба меню (на меню из хедера и на новое которое только к футеру относится)
+      -->
+      <!--
+      <nav class="header__nav">
+        <ul class="header__list list-reset">
+          <li>
+            <a class="nav-link" href="#">О предприятии</a>
+          </li>
+          <li>
+            @@include('../components/drop-down-1.html')
+          </li>
+          <li>
+            <a class="nav-link" href="#">Пресс-центр</a>
+          </li>
+          <li>
+            <a class="nav-link" href="#">Карьера</a>
+          </li>
+          <li>
+            <a class="nav-link" href="#">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+      -->
+
+      <nav class="footer__nav">
+        <ul class="footer__list list-reset">
+          <li>
+            <a class="nav-link" href="#">О предприятии</a>
+          </li>
+          <li>
+            <a class="nav-link" href="#">Продукция</a>
+          </li>
+          <li>
+            <a class="nav-link" href="#">Пресс-центр</a>
+          </li>
+          <li>
+            <a class="nav-link" href="#">Карьера</a>
+          </li>
+          <li>
+            <a class="nav-link" href="#">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+
+
+      <address class="footer__box-address">
+        <h3 class="footer__caption">
+          Производство:
+        </h3>
+        <a href="https://yandex.ru/maps/968/cherepovets/house/severnoye_shosse_40v/Z04YfgZgSUUOQFtjfX13cXlrZg==/?ll=37.810010%2C59.160582&z=17.3"
+          class="footer__top-link">
+          Вологодская область, г. Череповец, Северное шоссе, 40В
+        </a>
+      </address>
+
+    </div>
+    <div class="footer__line-bottom">
+      <div class="footer__bottom-left">
+        <p class="footer__desc">
+          © 2025
+        </p>
+        <a href="#" class="footer__bottom-link">
+          Все права защищены
+        </a>
+        <a href="#" class="footer__bottom-link">
+          Политика в области обработки персональных данных
+        </a>
+      </div>
+      <div class="footer__bottom-right">
+        <a href="https://x2digital.ru/" class="linkX2">
+          <svg width="144" height="28" viewBox="0 0 144 28" fill="none">
+            <use xlink:href="img/sprite.svg#x2"></use>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>

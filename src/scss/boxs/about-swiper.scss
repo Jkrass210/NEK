@@ -1,0 +1,167 @@
+.about-swiper {
+  .swiper-slide {
+    box-sizing: border-box;
+    height: auto;
+  }
+
+  &-top {
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 11px;
+
+    &__btn-group {
+      position: absolute;
+      top: 28px;
+      right: 28px;
+      z-index: 2;
+      display: flex;
+      gap: 8px;
+
+      .swiper-btn {
+        color: var(--black);
+        background-color: var(--white);
+      }
+    }
+
+    &-wrapp {
+      border-radius: 20px;
+      overflow: hidden;
+      height: 100%;
+      display: flex;
+      position: relative;
+      min-height: 440px;
+
+      &::before {
+        content: "";
+        display: block;
+        padding-top: 65%;
+      }
+
+      picture {
+        border-radius: 20px;
+        position: absolute;
+        inset: 0;
+        display: flex;
+      }
+
+      &__img {
+        border-radius: 20px;
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      video {
+        border-radius: 20px;
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      iframe {
+        border-radius: 20px;
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  &-bottom {
+    border-radius: 20px;
+    overflow: hidden;
+
+    .swiper-slide-thumb-active {
+      .about-swiper-bottom-wrapp {
+        &::after {
+          opacity: 1;
+        }
+      }
+    }
+
+    &-wrapp {
+      cursor: pointer;
+      border-radius: 20px;
+      overflow: hidden;
+      height: 100%;
+      display: flex;
+      position: relative;
+      max-height: 132px;
+
+      &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        opacity: 0;
+        border-radius: 20px;
+        transition: opacity 0.4s ease-in-out;
+        border: 1px solid var(--orange);
+      }
+
+      &::before {
+        content: "";
+        display: block;
+        padding-top: 83%;
+      }
+
+      &:hover {
+        &::after {
+          opacity: 1;
+        }
+      }
+
+      picture {
+        border-radius: 20px;
+        position: absolute;
+        inset: 0;
+        display: flex;
+      }
+
+      &__img {
+        border-radius: 20px;
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      video {
+        border-radius: 20px;
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      iframe {
+        border-radius: 20px;
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .about-swiper {
+    &-top {
+      &-wrapp {
+        &::before {
+          padding-top: 45%;
+        }
+      }
+    }
+  }
+
+}

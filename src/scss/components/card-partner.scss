@@ -1,0 +1,20 @@
+.card-partner {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 148px;
+}
+
+@media (max-width: 1100px) {
+  .card-partner {
+    min-height: 120px;
+  }
+}
+
+@media (max-width: 550px) {
+  .card-partner {
+    padding: 10px 20px;
+    min-height: 92px;
+  }
+}

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404</title>
+  <link href="css/normalize.min.css?_v=20250812123333" rel="stylesheet">
+  <link href="css/swiper-bundle.min.css?_v=20250812123333" rel="stylesheet">
+  <link href="css/style.css?_v=20250812123333" rel="stylesheet">
+
+  <script>
+    window.addEventListener('load', function () {
+      document.body.classList.remove('loading');
+      document.getElementById('preloader').style.display = 'none';
+    });
+  </script>
+
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=93db7d8d-d126-4f79-9f10-621804bddd7f&lang=ru_RU&_v=20250812123333"></script>
+  
+  <script src="js/jquery-3.6.0.min.js?_v=20250812123333" defer></script>
+  <script src="js/jquery.validate.min.js?_v=20250812123333" defer></script>
+  <script src="js/additional-methods.min.js?_v=20250812123333" defer></script>
+  <script src="js/cleave.js?_v=20250812123333" defer></script>
+  <script src="js/swiper-bundle.min.js?_v=20250812123333" defer></script>
+  <script src="js/fslightbox.js?_v=20250812123333" defer></script>
+  <script type="module" src="js/main.js?_v=20250812123333"></script>
+</head>
+
+<body>
+  <div id="preloader">
+  <div class="loader"></div>
+</div>
+  <header class="header" id="header">
+  <div class="header__container container">
+    <div class="header__content">
+      <div class="header__left">
+        <ul class="box-logo list-reset">
+  <li>
+    <a href="/">
+      <svg width="169" height="32" viewBox="0 0 169 32" fill="none">
+        <use xlink:href="img/sprite.svg#mainLogo"></use>
+      </svg>
+    </a>
+  </li>
+  <li>
+    <a href="/">
+      <svg width="104" height="34" viewBox="0 0 104 34" fill="none">
+        <use xlink:href="img/sprite.svg#nekLogo"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+        <div class="header__box-nav" for-open="burger">
+          <div class="header__mobail-box"></div>
+          <nav class="header__nav">
+            <ul class="header__list list-reset">
+              <li>
+                <a class="nav-link" href="#">О предприятии</a>
+              </li>
+              <li>
+                <div class="drop-down-1">
+  <button class="drop-down-1__btn btn-reset">
+    <span>Продукция</span>
+    <svg width="7" height="4" viewBox="0 0 7 4" fill="none">
+      <use xlink:href="img/sprite.svg#arrowDrop1"></use>
+    </svg>
+  </button>
+  <div class="drop-down-1__box">
+    <button class="drop-down-1__btn-back btn-reset">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <use xlink:href="img/sprite.svg#arrowBackMenu"></use>
+      </svg>
+      <span>Назад в меню</span>
+    </button>
+    <ul class="drop-down-1__list list-reset">
+      <li>
+        <a class="nav-link" href="#">Приборы учета электрической энергии</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#">Счетчики воды</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#">Приборы учёта газа</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#">Коммуникационное оборудование</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#">Зарядные станции</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#">Микроконтроллеры</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#">Вспомогательные устройства</a>
+      </li>
+    </ul>
+  </div>
+</div>
+              </li>
+              <li>
+                <a class="nav-link" href="#">Пресс-центр</a>
+              </li>
+              <li>
+                <a class="nav-link" href="#">Карьера</a>
+              </li>
+              <li>
+                <a class="nav-link" href="#">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+      <div class="header__right">
+        <div class="switcher">
+  <label class="switcher__label">
+    <input class="switcher__input" type="checkbox" id="languageTogg">
+    <span class="switcher__status">
+      <i>Ru</i>
+      <i>En</i>
+    </span>
+  </label>
+</div>
+        <button class="burger btn-reset" id="burger">
+  <span class="burger__icon">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+      <use xlink:href="img/sprite.svg#burger"></use>
+    </svg>
+  </span>
+
+  <span class="burger__close">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+      <use xlink:href="img/sprite.svg#burgerClose"></use>
+    </svg>
+  </span>
+</button>
+      </div>
+    </div>
+  </div>
+</header>
+  <main class="main">
+    <section class="box-not-exist">
+  <div class="box-not-exist__container container">
+    <h2 class="box-not-exist__title">Страницы не существует</h2>
+    <div class="box-not-exist__content">
+      <div class="top">
+        <picture><source srcset="img/404/404.webp" type="image/webp"><img src="img/404/404.png" alt="404"></picture>
+      </div>
+      <div class="bottom">
+        <p class="bottom__desc">
+          Ссылка не найдена. Возможно ссылка больше не работает или страница была удалена. Попробуйте перейти на главную страницу, а если вас интересует наша продукция откройте каталог
+        </p>
+        <div class="bottom__btn-group">
+          <a href="#" class="box-not-exist__btn main-page">
+            Главная страница
+          </a>
+          <a href="#" class="box-not-exist__btn catalog">
+            Каталог продукции
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  </main>
+  <footer class="footer" id="footer">
+  <div class="footer__container container">
+    <div class="footer__line-top">
+      <ul class="box-logo list-reset">
+  <li>
+    <a href="/">
+      <svg width="169" height="32" viewBox="0 0 169 32" fill="none">
+        <use xlink:href="img/sprite.svg#mainLogo"></use>
+      </svg>
+    </a>
+  </li>
+  <li>
+    <a href="/">
+      <svg width="104" height="34" viewBox="0 0 104 34" fill="none">
+        <use xlink:href="img/sprite.svg#nekLogo"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+      <!--
+      тут не совсем понятно что делать с меню, если это будет один компонент с тем что в хедере то можно вставить разметку из хедера, но тогда не понятно что делать с пыавдающим списком. Спили прописаны на оба меню (на меню из хедера и на новое которое только к футеру относится)
+      -->
+      <!--
+      <nav class="header__nav">
+        <ul class="header__list list-reset">
+          <li>
+            <a class="nav-link" href="#">О предприятии</a>
+          </li>
+          <li>
+            <div class="drop-down-1">
+  <button class="drop-down-1__btn btn-reset">
+    <span>Продукция</span>
+    <svg width="7" height="4" viewBox="0 0 7 4" fill="none">
+      <use xlink:href="img/sprite.svg#arrowDrop1"></use>
+    </svg>
+  </button>
+  <div class="drop-down-1__box">
+    <button class="drop-down-1__btn-back btn-reset">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <use xlink:href="img/sprite.svg#arrowBackMenu"></use>
+      </svg>
+      <span>Назад в меню</span>
+    </button>
+    <ul class="drop-down-1__list list-reset">
+      <li>
+        <a class="nav-link" href="#">Приборы учета электрической энергии</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#">Счетчики воды</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#">Приборы учёта газа</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#">Коммуникационное оборудование</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#">Зарядные станции</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#">Микроконтроллеры</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#">Вспомогательные устройства</a>
+      </li>
+    </ul>
+  </div>
+</div>
+          </li>
+          <li>
+            <a class="nav-link" href="#">Пресс-центр</a>
+          </li>
+          <li>
+            <a class="nav-link" href="#">Карьера</a>
+          </li>
+          <li>
+            <a class="nav-link" href="#">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+      -->
+
+      <nav class="footer__nav">
+        <ul class="footer__list list-reset">
+          <li>
+            <a class="nav-link" href="#">О предприятии</a>
+          </li>
+          <li>
+            <a class="nav-link" href="#">Продукция</a>
+          </li>
+          <li>
+            <a class="nav-link" href="#">Пресс-центр</a>
+          </li>
+          <li>
+            <a class="nav-link" href="#">Карьера</a>
+          </li>
+          <li>
+            <a class="nav-link" href="#">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+
+
+      <address class="footer__box-address">
+        <h3 class="footer__caption">
+          Производство:
+        </h3>
+        <a href="https://yandex.ru/maps/968/cherepovets/house/severnoye_shosse_40v/Z04YfgZgSUUOQFtjfX13cXlrZg==/?ll=37.810010%2C59.160582&z=17.3"
+          class="footer__top-link">
+          Вологодская область, г. Череповец, Северное шоссе, 40В
+        </a>
+      </address>
+
+    </div>
+    <div class="footer__line-bottom">
+      <div class="footer__bottom-left">
+        <p class="footer__desc">
+          © 2025
+        </p>
+        <a href="#" class="footer__bottom-link">
+          Все права защищены
+        </a>
+        <a href="#" class="footer__bottom-link">
+          Политика в области обработки персональных данных
+        </a>
+      </div>
+      <div class="footer__bottom-right">
+        <a href="https://x2digital.ru/" class="linkX2">
+          <svg width="144" height="28" viewBox="0 0 144 28" fill="none">
+            <use xlink:href="img/sprite.svg#x2"></use>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

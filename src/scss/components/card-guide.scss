@@ -1,0 +1,110 @@
+.card-guide {
+  padding-top: 12px;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  min-height: 524px;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  background-color: var(--white);
+  background-image: url(../img/card-guide/ornament.png);
+  background-repeat: no-repeat;
+  background-position: top left;
+  &.main-card {
+    .card-guide__box-info {
+      background-color: var(--orange);
+      h3 {
+        color: var(--white);
+      }
+      p {
+        color: var(--white);
+      }
+    }
+  }
+  &__box-img {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    picture {
+      display: flex;
+    }
+    img {
+      max-height: 100%;
+    }
+  }
+  &__box-info {
+    min-height: 100px;
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 24px 28px;
+    position: absolute;
+    inset: auto 0 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background-color: var(--gray-150);
+    h3 {
+      font-family: var(--font-family);
+      font-weight: 500;
+      font-size: 22px;
+      line-height: 118%;
+      color: var(--black);
+    }
+    p {
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: 17px;
+      color: var(--black);
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .card-guide {
+    min-height: 430px;
+    padding-top: 8px;
+    background-image: url(../img/card-guide/ornament1100.png);
+    &__box-img {
+      img {
+        max-width: 252px;
+      }
+    }
+    &__box-info {
+      min-height: 115px;
+      padding: 20px 22px;
+      inset: auto 0 3px 0;
+      h3 {
+        font-size: 20px;
+        line-height: 130%;
+      }
+      p {
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .card-guide {
+    min-height: 385px;
+    &__box-img {
+      img {
+        max-width: 230px;
+      }
+    }
+    &__box-info {
+      min-height: 97px;
+      padding: 16px;
+      inset: auto 0 0 0;
+      h3 {
+        font-size: 18px;
+        line-height: 128%;
+      }
+      p {
+        font-size: 14px;
+      }
+    }
+  }
+}

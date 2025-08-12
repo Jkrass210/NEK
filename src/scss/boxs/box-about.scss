@@ -1,0 +1,185 @@
+.box-about {
+  position: relative;
+  margin-bottom: 124px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -286px;
+    z-index: -1;
+    width: 785px;
+    height: 160%;
+    background-image: url(../img/box-about/ornament.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: cover;
+  }
+
+  &__content {
+    display: flex;
+    column-gap: 24px;
+    row-gap: 32px;
+    flex-wrap: wrap;
+
+    .top {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 133%;
+      color: var(--black);
+
+      p {
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 133%;
+        color: var(--black);
+      }
+
+      ul {
+        list-style: none;
+        margin: 0;
+        padding-left: 44px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 133%;
+        color: var(--black);
+
+        li {
+          position: relative;
+          font-family: var(--font-family);
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 133%;
+          color: var(--black);
+
+          &::before {
+            content: "";
+            position: absolute;
+            top: 11px;
+            left: -36px;
+            border-radius: 50px;
+            width: 24px;
+            min-width: 24px;
+            height: 2px;
+            background-color: var(--orange);
+          }
+        }
+      }
+    }
+
+    .bottom {
+      width: calc(672 / 1368 * 100%);
+    }
+  }
+
+  &__mobil-wrapper-link {
+    display: none;
+  }
+}
+
+@media (max-width: 1100px) {
+  .box-about {
+    margin-bottom: 104px;
+    &::after {
+      content: "";
+      left: 0;
+      top: -500px;
+      width: 100%;
+      height: 120%;
+      background-image: url(../img/box-about/ornament1100.png);
+      background-position: right 22px center;
+    }
+
+    &__content {
+      flex-direction: column;
+
+      .top {
+        font-size: 17px;
+        line-height: 129%;
+
+        p {
+          font-size: 17px;
+          line-height: 129%;
+        }
+
+        ul {
+          font-size: 17px;
+          line-height: 129%;
+
+          li {
+            font-size: 17px;
+            line-height: 129%;
+          }
+        }
+      }
+
+      .bottom {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .box-about {
+    margin-bottom: 80px;
+    &::after {
+      display: none;
+    }
+
+    &__content {
+      margin-bottom: 28px;
+      .top {
+        gap: 16px;
+        font-size: 16px;
+        line-height: 125%;
+
+        p {
+          font-size: 16px;
+          line-height: 125%;
+        }
+
+        ul {
+          font-size: 16px;
+          line-height: 125%;
+
+          li {
+            font-size: 16px;
+            line-height: 125%;
+          }
+        }
+      }
+      .bottom {
+        display: none;
+      }
+    }
+
+    &__mobil-wrapper-link {
+      display: flex;
+      .box-about__link-all {
+        flex: 1;
+        text-align: center;
+        &.link-all {
+          padding: 12px;
+          background-image: none;
+          .text {
+            padding: 0 19px 0 0;
+            background-image: url(../img/arrows/1.svg);
+            background-repeat: no-repeat;
+            background-position: center right;
+          }
+        }
+      }
+    }
+  }
+}

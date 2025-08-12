@@ -1,0 +1,13 @@
+.guide-swiper {
+  .swiper-slide {
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 890px) {
+  .guide-swiper {
+    &.swiper {
+      overflow: visible;
+    }
+  }
+}

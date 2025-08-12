@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Карточка товара</title>
+  <link href="css/normalize.min.css?_v=20250812123333" rel="stylesheet">
+  <link href="css/swiper-bundle.min.css?_v=20250812123333" rel="stylesheet">
+  <link href="css/style.css?_v=20250812123333" rel="stylesheet">
+
+  <script>
+    window.addEventListener('load', function () {
+      document.body.classList.remove('loading');
+      document.getElementById('preloader').style.display = 'none';
+    });
+  </script>
+
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=93db7d8d-d126-4f79-9f10-621804bddd7f&lang=ru_RU&_v=20250812123333"></script>
+  
+  <script src="js/jquery-3.6.0.min.js?_v=20250812123333" defer></script>
+  <script src="js/jquery.validate.min.js?_v=20250812123333" defer></script>
+  <script src="js/additional-methods.min.js?_v=20250812123333" defer></script>
+  <script src="js/cleave.js?_v=20250812123333" defer></script>
+  <script src="js/swiper-bundle.min.js?_v=20250812123333" defer></script>
+  <script src="js/fslightbox.js?_v=20250812123333" defer></script>
+  <script type="module" src="js/main.js?_v=20250812123333"></script>
+</head>
+
+<body>
+  <div id="preloader">
+  <div class="loader"></div>
+</div>
+  <header class="header" id="header">
+  <div class="header__container container">
+    <div class="header__content">
+      <div class="header__left">
+        <ul class="box-logo list-reset">
+  <li>
+    <a href="/">
+      <svg width="169" height="32" viewBox="0 0 169 32" fill="none">
+        <use xlink:href="img/sprite.svg#mainLogo"></use>
+      </svg>
+    </a>
+  </li>
+  <li>
+    <a href="/">
+      <svg width="104" height="34" viewBox="0 0 104 34" fill="none">
+        <use xlink:href="img/sprite.svg#nekLogo"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+        <div class="header__box-nav" for-open="burger">
+          <div class="header__mobail-box"></div>
+          <nav class="header__nav">
+            <ul class="header__list list-reset">
+              <li>
+                <a class="nav-link" href="#">О предприятии</a>
+              </li>
+              <li>
+                <div class="drop-down-1">
+  <button class="drop-down-1__btn btn-reset">
+    <span>Продукция</span>
+    <svg width="7" height="4" viewBox="0 0 7 4" fill="none">
+      <use xlink:href="img/sprite.svg#arrowDrop1"></use>
+    </svg>
+  </button>
+  <div class="drop-down-1__box">
+    <button class="drop-down-1__btn-back btn-reset">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <use xlink:href="img/sprite.svg#arrowBackMenu"></use>
+      </svg>
+      <span>Назад в меню</span>
+    </button>
+    <ul class="drop-down-1__list list-reset">
+      <li>
+        <a class="nav-link" href="#">Приборы учета электрической энергии</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#">Счетчики воды</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#">Приборы учёта газа</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#">Коммуникационное оборудование</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#">Зарядные станции</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#">Микроконтроллеры</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#">Вспомогательные устройства</a>
+      </li>
+    </ul>
+  </div>
+</div>
+              </li>
+              <li>
+                <a class="nav-link" href="#">Пресс-центр</a>
+              </li>
+              <li>
+                <a class="nav-link" href="#">Карьера</a>
+              </li>
+              <li>
+                <a class="nav-link" href="#">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+      <div class="header__right">
+        <div class="switcher">
+  <label class="switcher__label">
+    <input class="switcher__input" type="checkbox" id="languageTogg">
+    <span class="switcher__status">
+      <i>Ru</i>
+      <i>En</i>
+    </span>
+  </label>
+</div>
+        <button class="burger btn-reset" id="burger">
+  <span class="burger__icon">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+      <use xlink:href="img/sprite.svg#burger"></use>
+    </svg>
+  </span>
+
+  <span class="burger__close">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+      <use xlink:href="img/sprite.svg#burgerClose"></use>
+    </svg>
+  </span>
+</button>
+      </div>
+    </div>
+  </div>
+</header>
+  <main class="main">
+    <div class="path">
+  <div class="container">
+    <ul class="path__list list-reset">
+      <li>
+        <a href="/">Главная страница</a>
+      </li>
+      <li>
+        <a href="#">Каталог продукции</a>
+      </li>
+      <li>
+        <a href="#">Приборы учета электрической энергии</a>
+      </li>
+      <li>
+        <a href="#">Счетчик однофазный интеллектуальный НАРТИС-И100</a>
+      </li>
+    </ul>
+    <div class="path__box-back">
+      <a class="path__link-back" href="#">
+        <svg width="28" height="12" viewBox="0 0 28 12" fill="none">
+          <use xlink:href="img/sprite.svg#arrBack"></use>
+        </svg>
+        <span class="text">Вернуться назад</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+    <section class="box-detailed-product section">
+  <div class="box-detailed-product__container container">
+    <div class="box-detailed-product__content content">
+      <div class="content__swiper">
+        <div class="detailed-product-swiper swiper">
+  <button class="btn-reset swiper-btn swiper-btn-next">
+  <svg width="18" height="12" viewBox="0 0 18 12" fill="none">
+    <use xlink:href="img/sprite.svg#arrSwBtNext"></use>
+  </svg>
+</button>
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">
+      <div class="detailed-product-swiper__box-img">
+        <a class="detailed-product-swiper__link" data-fslightbox="gallery" href="img/detailed-product-swiper/1.png">
+          <picture><source srcset="img/detailed-product-swiper/1.webp" type="image/webp"><img src="img/detailed-product-swiper/1.png" alt="img"></picture>
+        </a>
+      </div>
+    </div>
+    <div class="swiper-slide">
+      <div class="detailed-product-swiper__box-img">
+        <a class="detailed-product-swiper__link" data-fslightbox="gallery" href="img/detailed-product-swiper/2.png">
+          <picture><source srcset="img/detailed-product-swiper/2.webp" type="image/webp"><img src="img/detailed-product-swiper/2.png" alt="img"></picture>
+        </a>
+      </div>
+    </div>
+    <div class="swiper-slide">
+      <div class="detailed-product-swiper__box-img">
+        <a class="detailed-product-swiper__link" data-fslightbox="gallery" href="img/detailed-product-swiper/3.png">
+          <picture><source srcset="img/detailed-product-swiper/3.webp" type="image/webp"><img src="img/detailed-product-swiper/3.png" alt="img"></picture>
+        </a>
+      </div>
+    </div>
+    <div class="swiper-slide">
+      <div class="detailed-product-swiper__box-img">
+        <a class="detailed-product-swiper__link" data-fslightbox="gallery" href="img/detailed-product-swiper/3.png">
+          <picture><source srcset="img/detailed-product-swiper/3.webp" type="image/webp"><img src="img/detailed-product-swiper/3.png" alt="img"></picture>
+        </a>
+      </div>
+    </div>
+  </div>
+  <button class="btn-reset swiper-btn swiper-btn-prev">
+  <svg width="18" height="12" viewBox="0 0 18 12" fill="none">
+    <use xlink:href="img/sprite.svg#arrSwBtPrev"></use>
+  </svg>
+</button>
+</div>
+        <div class="content__group-download">
+          <div class="btn-download">
+  <button class="btn-download__btn btn-reset">
+    <span class="text">
+      Документация
+    </span>
+    <span class="icon">
+      <svg width="18" height="12" viewBox="0 0 18 12" fill="none">
+        <use xlink:href="img/sprite.svg#arrowDownload"></use>
+      </svg>
+    </span>
+  </button>
+
+  <div class="btn-download__popup-modal popup-modal">
+    <div class="popup-modal__window">
+      <button class="btn-download__close btn-reset close">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <use xlink:href="img/sprite.svg#closeDownload"></use>
+        </svg>
+      </button>
+      <ul class="btn-download__list-links list-reset">
+        <li>
+          <a href="#" download="#" class="btn-download__link">
+            <span class="text">
+              Руководство по эксплуатации НАРТИС-И100
+            </span>
+            <span class="icon">
+              <svg width="12" height="16" viewBox="0 0 12 16" fill="none">
+                <use xlink:href="img/sprite.svg#linkDownload"></use>
+              </svg>
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="#" download="#" class="btn-download__link">
+            <span class="text">
+              Описание типа средства измерений НАРТИС-И100
+            </span>
+            <span class="icon">
+              <svg width="12" height="16" viewBox="0 0 12 16" fill="none">
+                <use xlink:href="img/sprite.svg#linkDownload"></use>
+              </svg>
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="#" download="#" class="btn-download__link">
+            <span class="text">
+              Методика поверки НАРТИС-И100
+            </span>
+            <span class="icon">
+              <svg width="12" height="16" viewBox="0 0 12 16" fill="none">
+                <use xlink:href="img/sprite.svg#linkDownload"></use>
+              </svg>
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="#" download="#" class="btn-download__link">
+            <span class="text">
+              Инструкция по снятию показаний
+            </span>
+            <span class="icon">
+              <svg width="12" height="16" viewBox="0 0 12 16" fill="none">
+                <use xlink:href="img/sprite.svg#linkDownload"></use>
+              </svg>
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="#" download="#" class="btn-download__link">
+            <span class="text">
+              Инструкция по аппаратной блокировке реле НАРТИС-И100
+            </span>
+            <span class="icon">
+              <svg width="12" height="16" viewBox="0 0 12 16" fill="none">
+                <use xlink:href="img/sprite.svg#linkDownload"></use>
+              </svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+          <div class="btn-download">
+  <button class="btn-download__btn btn-reset">
+    <span class="text">
+      Программное обеспечение
+    </span>
+    <span class="icon">
+      <svg width="18" height="12" viewBox="0 0 18 12" fill="none">
+        <use xlink:href="img/sprite.svg#arrowDownload"></use>
+      </svg>
+    </span>
+  </button>
+
+  <div class="btn-download__popup-modal popup-modal">
+    <div class="popup-modal__window">
+      <button class="btn-download__close btn-reset close">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <use xlink:href="img/sprite.svg#closeDownload"></use>
+        </svg>
+      </button>
+      <ul class="btn-download__list-links list-reset">
+        <li>
+          <a href="#" download="#" class="btn-download__link">
+            <span class="text">
+              Руководство по эксплуатации НАРТИС-И100
+            </span>
+            <span class="icon">
+              <svg width="12" height="16" viewBox="0 0 12 16" fill="none">
+                <use xlink:href="img/sprite.svg#linkDownload"></use>
+              </svg>
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="#" download="#" class="btn-download__link">
+            <span class="text">
+              Описание типа средства измерений НАРТИС-И100
+            </span>
+            <span class="icon">
+              <svg width="12" height="16" viewBox="0 0 12 16" fill="none">
+                <use xlink:href="img/sprite.svg#linkDownload"></use>
+              </svg>
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="#" download="#" class="btn-download__link">
+            <span class="text">
+              Методика поверки НАРТИС-И100
+            </span>
+            <span class="icon">
+              <svg width="12" height="16" viewBox="0 0 12 16" fill="none">
+                <use xlink:href="img/sprite.svg#linkDownload"></use>
+              </svg>
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="#" download="#" class="btn-download__link">
+            <span class="text">
+              Инструкция по снятию показаний
+            </span>
+            <span class="icon">
+              <svg width="12" height="16" viewBox="0 0 12 16" fill="none">
+                <use xlink:href="img/sprite.svg#linkDownload"></use>
+              </svg>
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="#" download="#" class="btn-download__link">
+            <span class="text">
+              Инструкция по аппаратной блокировке реле НАРТИС-И100
+            </span>
+            <span class="icon">
+              <svg width="12" height="16" viewBox="0 0 12 16" fill="none">
+                <use xlink:href="img/sprite.svg#linkDownload"></use>
+              </svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+        </div>
+      </div>
+      <div class="content__text">
+        <div class="content__line-top">
+          <h2 class="content__title">
+            НАРТИС-И100
+          </h2>
+          <p class="content__desc">
+            Счетчик однофазный интеллектуальный
+          </p>
+        </div>
+        <div class="content__box-desc">
+          <p>
+            Предназначен для измерения активной и реактивной электроэнергии прямого и обратного направления, измерений активной и реактивной электрической мощности, измерений параметров сети: среднеквадратических значений напряжения и силы переменного тока, частоты сети, коэффициента мощности cosφ, коэффициента реактивной мощности tgφ, а также измерений показателей качества электроэнергии: отрицательного и положительного отклонений напряжения, отклонения основной частоты напряжения электропитания от номинального значения в однофазных сетях переменного тока частотой 50 Гц.
+          </p>
+          <p>
+            Счетчик Нартис-И100 полностью соответствует требованиям, предъявляемым:
+          </p>
+          <ul>
+            <li>
+              Постановлением Правительства РФ от 19 июня 2020 г. № 890 «О порядке предоставления доступа к минимальному набору функций интеллектуальных систем учета электрической энергии (мощности)»
+            </li>
+            <li>
+              Стандартом ПАО «Россети»
+            </li>
+            <li>
+              Протокол обмена соответствует СПОДЭС (ГОСТ Р 58940-2020).
+            </li>
+          </ul>
+          <p>
+            Производство счетчика Нартис-И100 соответствует требованиям к продукции, произведенной на территории РФ:
+          </p>
+          <ul>
+            <li>
+              НАРТИС-И100-W113-2 внесен в Реестр Минпромторга, заключение № 138645/11 от 21.12.2023
+            </li>
+            <li>
+              НАРТИС-И100-SP1-2 внесен в Реестр Минпромторга, заключение № 133468/11 от 11.12.2023
+            </li>
+            <li>
+              НАРТИС-И100-W112-2 внесен в Реестр Минпромторга, заключение № 112843/10 от 20.10.2023
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="content__box-info">
+        <div class="content__wrapper-line">
+          <div class="content__line-btns">
+            <button class="box-detailed-product__btn active btn-reset">
+              <span>Характеристики</span>
+            </button>
+            <button class="box-detailed-product__btn btn-reset">
+              <span>Особенности</span>
+            </button>
+            <button class="box-detailed-product__btn btn-reset">
+              <span>Модификации</span>
+            </button>
+          </div>
+        </div>
+        <div class="content__wrapper-info">
+          <div class="content__info-point info-point">
+            <ul class="info-point__list list-reset">
+              <li class="info-point__item head">
+                <p class="head__title">Наименование характеристики</p>
+                <p class="head__title">Значение</p>
+              </li>
+              <li class="info-point__item">
+                <p>Класс точности при измерении активной энергии прямого и обратного направления по ГОСТ 31819.21-2012</p>
+                <p>1</p>
+              </li>
+              <li class="info-point__item">
+                <p>Класс точности при измерении реактивной энергии прямого и обратного направления по ГОСТ 31819.23-2012</p>
+                <p>1</p>
+              </li>
+              <li class="info-point__item">
+                <p>Номинальное напряжение Uф.ном/Uл.ном, В</p>
+                <p>230</p>
+              </li>
+              <li class="info-point__item">
+                <p>Расширенный рабочий диапазон</p>
+                <p>от 0,9·Uном до 1,1·Uном</p>
+              </li>
+              <li class="info-point__item">
+                <p>Предельный рабочий диапазон напряжения</p>
+                <p>от 0 до 1,2·Uном</p>
+              </li>
+              <li class="info-point__item special">
+                <p>Базовый/максимальный ток (Iб/Iмакс), А</p>
+                <p><span>60</span>; <span>80</span>; <span>100</span></p>
+              </li>
+              <li class="info-point__item special">
+                <p>Номинальное значение частоты, Гц</p>
+                <p>50</p>
+              </li>
+              <li class="info-point__item special">
+                <p>Потребляемая мощность по цепи напряжения; , В·А (Вт), не более</p>
+                <p>10 (2)</p>
+              </li>
+              <li class="info-point__item special">
+                <p>Потребляемая мощность по цепи тока, В·А (Вт), не более</p>
+                <p>0,3</p>
+              </li>
+              <li class="info-point__item special">
+                <p>Габаритные размеры счетчик в корпусе типа W111 (в×д×ш), мм, не более</p>
+                <p>225х132х75</p>
+              </li>
+              <li class="info-point__item special">
+                <p>Габаритные размеры измерительного блока счетчика в корпусе типа SP31</p>
+                <p>205х162х97</p>
+              </li>
+            </ul>
+          </div>
+          <div class="content__info-point info-point">
+            <div>
+              <h4>Особенности</h4>
+              <p>Особенности Особенности Особенности Особенности Особенности Особенности Особенности Особенности Особенности</p>
+            </div>
+          </div>
+          <div class="content__info-point info-point">
+            <div>
+              <h4>Модификации</h4>
+              <p>Модификации Модификации Модификации Модификации  Особенности Особенности Особенности Особенности Особенности Особенности Особенности Особенности</p>
+              <p>Модификации Модификации Модификации Модификации  Особенности Особенности Особенности Особенности Особенности Особенности Особенности Особенности</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <section class="box-feedback section">
+  <div class="box-feedback__container container">
+    <div class="box-feedback__content">
+      <p>
+        Связаться по вопросам сервисного и гарантийного обслуживания
+      </p>
+      <a href="#">
+        Написать
+      </a>
+    </div>
+  </div>
+</section>
+  </main>
+  <footer class="footer" id="footer">
+  <div class="footer__container container">
+    <div class="footer__line-top">
+      <ul class="box-logo list-reset">
+  <li>
+    <a href="/">
+      <svg width="169" height="32" viewBox="0 0 169 32" fill="none">
+        <use xlink:href="img/sprite.svg#mainLogo"></use>
+      </svg>
+    </a>
+  </li>
+  <li>
+    <a href="/">
+      <svg width="104" height="34" viewBox="0 0 104 34" fill="none">
+        <use xlink:href="img/sprite.svg#nekLogo"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+      <!--
+      тут не совсем понятно что делать с меню, если это будет один компонент с тем что в хедере то можно вставить разметку из хедера, но тогда не понятно что делать с пыавдающим списком. Спили прописаны на оба меню (на меню из хедера и на новое которое только к футеру относится)
+      -->
+      <!--
+      <nav class="header__nav">
+        <ul class="header__list list-reset">
+          <li>
+            <a class="nav-link" href="#">О предприятии</a>
+          </li>
+          <li>
+            <div class="drop-down-1">
+  <button class="drop-down-1__btn btn-reset">
+    <span>Продукция</span>
+    <svg width="7" height="4" viewBox="0 0 7 4" fill="none">
+      <use xlink:href="img/sprite.svg#arrowDrop1"></use>
+    </svg>
+  </button>
+  <div class="drop-down-1__box">
+    <button class="drop-down-1__btn-back btn-reset">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <use xlink:href="img/sprite.svg#arrowBackMenu"></use>
+      </svg>
+      <span>Назад в меню</span>
+    </button>
+    <ul class="drop-down-1__list list-reset">
+      <li>
+        <a class="nav-link" href="#">Приборы учета электрической энергии</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#">Счетчики воды</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#">Приборы учёта газа</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#">Коммуникационное оборудование</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#">Зарядные станции</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#">Микроконтроллеры</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#">Вспомогательные устройства</a>
+      </li>
+    </ul>
+  </div>
+</div>
+          </li>
+          <li>
+            <a class="nav-link" href="#">Пресс-центр</a>
+          </li>
+          <li>
+            <a class="nav-link" href="#">Карьера</a>
+          </li>
+          <li>
+            <a class="nav-link" href="#">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+      -->
+
+      <nav class="footer__nav">
+        <ul class="footer__list list-reset">
+          <li>
+            <a class="nav-link" href="#">О предприятии</a>
+          </li>
+          <li>
+            <a class="nav-link" href="#">Продукция</a>
+          </li>
+          <li>
+            <a class="nav-link" href="#">Пресс-центр</a>
+          </li>
+          <li>
+            <a class="nav-link" href="#">Карьера</a>
+          </li>
+          <li>
+            <a class="nav-link" href="#">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+
+
+      <address class="footer__box-address">
+        <h3 class="footer__caption">
+          Производство:
+        </h3>
+        <a href="https://yandex.ru/maps/968/cherepovets/house/severnoye_shosse_40v/Z04YfgZgSUUOQFtjfX13cXlrZg==/?ll=37.810010%2C59.160582&z=17.3"
+          class="footer__top-link">
+          Вологодская область, г. Череповец, Северное шоссе, 40В
+        </a>
+      </address>
+
+    </div>
+    <div class="footer__line-bottom">
+      <div class="footer__bottom-left">
+        <p class="footer__desc">
+          © 2025
+        </p>
+        <a href="#" class="footer__bottom-link">
+          Все права защищены
+        </a>
+        <a href="#" class="footer__bottom-link">
+          Политика в области обработки персональных данных
+        </a>
+      </div>
+      <div class="footer__bottom-right">
+        <a href="https://x2digital.ru/" class="linkX2">
+          <svg width="144" height="28" viewBox="0 0 144 28" fill="none">
+            <use xlink:href="img/sprite.svg#x2"></use>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

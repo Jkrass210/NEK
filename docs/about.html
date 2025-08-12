@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>О предприятии</title>
+  <link href="css/normalize.min.css?_v=20250812123333" rel="stylesheet">
+  <link href="css/swiper-bundle.min.css?_v=20250812123333" rel="stylesheet">
+  <link href="css/style.css?_v=20250812123333" rel="stylesheet">
+
+  <script>
+    window.addEventListener('load', function () {
+      document.body.classList.remove('loading');
+      document.getElementById('preloader').style.display = 'none';
+    });
+  </script>
+
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=93db7d8d-d126-4f79-9f10-621804bddd7f&lang=ru_RU&_v=20250812123333"></script>
+  
+  <script src="js/jquery-3.6.0.min.js?_v=20250812123333" defer></script>
+  <script src="js/jquery.validate.min.js?_v=20250812123333" defer></script>
+  <script src="js/additional-methods.min.js?_v=20250812123333" defer></script>
+  <script src="js/cleave.js?_v=20250812123333" defer></script>
+  <script src="js/swiper-bundle.min.js?_v=20250812123333" defer></script>
+  <script src="js/fslightbox.js?_v=20250812123333" defer></script>
+  <script type="module" src="js/main.js?_v=20250812123333"></script>
+</head>
+
+<body>
+  <div id="preloader">
+  <div class="loader"></div>
+</div>
+  <header class="header" id="header">
+  <div class="header__container container">
+    <div class="header__content">
+      <div class="header__left">
+        <ul class="box-logo list-reset">
+  <li>
+    <a href="/">
+      <svg width="169" height="32" viewBox="0 0 169 32" fill="none">
+        <use xlink:href="img/sprite.svg#mainLogo"></use>
+      </svg>
+    </a>
+  </li>
+  <li>
+    <a href="/">
+      <svg width="104" height="34" viewBox="0 0 104 34" fill="none">
+        <use xlink:href="img/sprite.svg#nekLogo"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+        <div class="header__box-nav" for-open="burger">
+          <div class="header__mobail-box"></div>
+          <nav class="header__nav">
+            <ul class="header__list list-reset">
+              <li>
+                <a class="nav-link" href="#">О предприятии</a>
+              </li>
+              <li>
+                <div class="drop-down-1">
+  <button class="drop-down-1__btn btn-reset">
+    <span>Продукция</span>
+    <svg width="7" height="4" viewBox="0 0 7 4" fill="none">
+      <use xlink:href="img/sprite.svg#arrowDrop1"></use>
+    </svg>
+  </button>
+  <div class="drop-down-1__box">
+    <button class="drop-down-1__btn-back btn-reset">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <use xlink:href="img/sprite.svg#arrowBackMenu"></use>
+      </svg>
+      <span>Назад в меню</span>
+    </button>
+    <ul class="drop-down-1__list list-reset">
+      <li>
+        <a class="nav-link" href="#">Приборы учета электрической энергии</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#">Счетчики воды</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#">Приборы учёта газа</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#">Коммуникационное оборудование</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#">Зарядные станции</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#">Микроконтроллеры</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#">Вспомогательные устройства</a>
+      </li>
+    </ul>
+  </div>
+</div>
+              </li>
+              <li>
+                <a class="nav-link" href="#">Пресс-центр</a>
+              </li>
+              <li>
+                <a class="nav-link" href="#">Карьера</a>
+              </li>
+              <li>
+                <a class="nav-link" href="#">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+      <div class="header__right">
+        <div class="switcher">
+  <label class="switcher__label">
+    <input class="switcher__input" type="checkbox" id="languageTogg">
+    <span class="switcher__status">
+      <i>Ru</i>
+      <i>En</i>
+    </span>
+  </label>
+</div>
+        <button class="burger btn-reset" id="burger">
+  <span class="burger__icon">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+      <use xlink:href="img/sprite.svg#burger"></use>
+    </svg>
+  </span>
+
+  <span class="burger__close">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+      <use xlink:href="img/sprite.svg#burgerClose"></use>
+    </svg>
+  </span>
+</button>
+      </div>
+    </div>
+  </div>
+</header>
+  <main class="main">
+    <div class="path">
+  <div class="container">
+    <ul class="path__list list-reset">
+      <li>
+        <a href="/">Главная страница</a>
+      </li>
+      <li>
+        <a href="#">О предприятии</a>
+      </li>
+    </ul>
+    <div class="path__box-back">
+      <a class="path__link-back" href="#">
+        <svg width="28" height="12" viewBox="0 0 28 12" fill="none">
+          <use xlink:href="img/sprite.svg#arrBack"></use>
+        </svg>
+        <span class="text">Вернуться назад</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+    <section class="page-about section">
+  <div class="page-about__container container">
+    <div class="page-about__content">
+      <div class="page-about__line-top section-line-top">
+        <h2 class="page-about__title section-title">
+          О предприятии
+        </h2>
+      </div>
+
+      <div class="page-about__wrapper">
+        <div class="page-about__box-img">
+          <picture>
+            <source srcset="img/page-about/1-550.webp" media="(max-width: 550px)" type="image/webp">
+            <source srcset="img/page-about/1-550.jpg" media="(max-width: 550px)">
+            <source srcset="img/page-about/1-1100.webp" media="(max-width: 1100px)" type="image/webp">
+            <source srcset="img/page-about/1-1100.jpg" media="(max-width: 1100px)">
+            <source srcset="img/page-about/1.webp" type="image/webp">
+            <img src="img/page-about/1.jpg" alt="img">
+          </picture>
+        </div>
+
+        <div class="page-about__box-info">
+          <p>Завод расположен в г. Череповец по адресу: Индустриальный парк, Северное шоссе, 40В, территория опережающего социально-экономического развития (ТОСЭР)</p>
+          <p>Производственная мощность <span>-2.5 млн</span> прибора учета в год.</p>
+          <ul>
+            <li>
+              Однофазные и трехфазные (прямого, полукосвенного и косвенного включения) интеллектуальные приборы учета электроэнергии, которые соответствуют требованиям ФЗ-552 и постановления Правительства РФ «Об утверждении правил предоставления доступа к минимальному набору функций ИСУ электрической энергии(мощности)».
+            </li>
+            <li>
+              Однофазные и трехфазные приборы учета электроэнергии в исполнении СПЛИТ, которые соответствуют требованиям ФЗ-552 и постановления Правительства РФ «Об утверждении правил предоставления доступа к минимальному набору функций ИСУ электрической энергии(мощности)».
+            </li>
+            <li>
+              Зарядные станции и интеллектуальные счетчики воды и газа.
+            </li>
+            <li>
+              Коммуникационные модули и шлюзы, роутеры, устройства сбора и передачи данных.
+            </li>
+            <li>
+              Микроконтроллеры и микросхемы внешнего аналогового интерфейса для применения в составе выпускаемой продукции.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <section class="box-development section">
+  <div class="box-development__container container">
+    <div class="box-development__content"></div>
+    <div class="box-development__line-top section-line-top">
+      <h2 class="page-about__title section-title">
+        Направления развития
+      </h2>
+    </div>
+
+    <ul class="box-development__list list-reset">
+      <li>
+        <div class="card-development">
+          <div class="card-development__box-img">
+            <picture>
+              <source srcset="img/card-development/1-550.webp" media="(max-width: 550px)" type="image/webp">
+              <source srcset="img/card-development/1-550.jpg" media="(max-width: 550px)">
+              <source srcset="img/card-development/1-1100.webp" media="(max-width: 1100px)" type="image/webp">
+              <source srcset="img/card-development/1-1100.jpg" media="(max-width: 1100px)">
+              <source srcset="img/card-development/1.webp" type="image/webp">
+              <img src="img/card-development/1.jpg" alt="img">
+            </picture>
+          </div>
+          <div class="card-development__box-desc">
+            <h3>Разработка и производство отечественной радиоэлектронной компонентной базы приборов учета</h3>
+            <ul>
+              <li>
+                Модуль оцифровки аналогового сигнала 1 уровня локализации.
+              </li>
+              <li>
+                Реле управления нагрузкой.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="card-development">
+          <div class="card-development__box-img">
+            <picture>
+              <source srcset="img/card-development/2-550.webp" media="(max-width: 550px)" type="image/webp">
+              <source srcset="img/card-development/2-550.jpg" media="(max-width: 550px)">
+              <source srcset="img/card-development/2-1100.webp" media="(max-width: 1100px)" type="image/webp">
+              <source srcset="img/card-development/2-1100.jpg" media="(max-width: 1100px)">
+              <source srcset="img/card-development/2.webp" type="image/webp">
+              <img src="img/card-development/2.jpg" alt="img">
+            </picture>
+          </div>
+          <div class="card-development__box-desc">
+            <h3>Производство оборудования для предприятий энергетической отрасли России</h3>
+            <ul>
+              <li>
+                Производство оборудования для предприятий энергетической отрасли России
+              </li>
+              <li>
+                Терминалы релейной защиты и автоматики.
+              </li>
+              <li>
+                Контроллеры телемеханики и управления производством. Приборы учета газа.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  </div>
+</section>
+
+    <section class="box-counter">
+  <div class="box-counter__container container">
+    <div class="box-counter__content">
+      <ul class="box-counter__list list-reset">
+        <li>
+          <div class="card-counter">
+            <span class="card-counter__box-img">
+              <img class="card-counter__img" src="img/box-counter/1.svg" alt="svg">
+            </span>
+            <div class="counter">
+              <p class="counter__number hide">700<span>сотрудников</span></p>
+              <p class="counter__number number">0<span>сотрудников</span></p>
+              <span class="counter__desc">Специалистов и профессионалов в своих областях деятельности и производства</span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="card-counter">
+            <span class="card-counter__box-img">
+              <img class="card-counter__img" src="img/box-counter/2.svg" alt="svg">
+            </span>
+            <div class="counter">
+              <p class="counter__number hide">2.5<span>млн</span></p>
+              <p class="counter__number number">0<span>млн</span></p>
+              <span class="counter__desc">Приборов учета в год —производственная мощность предприятия</span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="card-counter">
+            <span class="card-counter__box-img">
+              <img class="card-counter__img" src="img/box-counter/3.svg" alt="svg">
+            </span>
+            <div class="counter">
+              <p class="counter__number hide">6300<span>м²</span></p>
+              <p class="counter__number number">0<span>м²</span></p>
+              <span class="counter__desc">Общая площадь производственных помещений</span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="card-counter">
+            <span class="card-counter__box-img">
+              <img class="card-counter__img" src="img/box-counter/4.svg" alt="svg">
+            </span>
+            <div class="counter">
+              <p class="counter__number hide">8<span>этапов</span></p>
+              <p class="counter__number number">0<span>этапов</span></p>
+              <span class="counter__desc">Общая площадь производственных помещений</span>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+    <section class="box-guide section">
+  <div class="box-guide__content">
+    <div class="container">
+      <div class="box-guide__line-top section-line-top">
+        <h2 class="box-guide__title section-title">
+          Руководство
+        </h2>
+      </div>
+    </div>
+
+
+    <div class="box-guide__wrapper">
+      <div class="container">
+        <div class="box-guide__desc">
+          <p>Руководство обеспечивает достижение стратегических целей и выполнение задач завода.</p>
+          <p>Создание лучших условий для труда и развития сотрудников — главный приоритет руководства завода</p>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="guide-swiper swiper">
+          <ul class="box-guide__list list-reset swiper-wrapper">
+            <li class="swiper-slide">
+              <div class="card-guide main-card">
+                <div class="card-guide__box-img">
+                  <picture><source srcset="img/card-guide/1.webp" type="image/webp"><img src="img/card-guide/1.png" alt="img"></picture>
+                </div>
+                <div class="card-guide__box-info">
+                  <h3>Владимиров Олег Валерьевич</h3>
+                  <p>Генеральный директор</p>
+                </div>
+              </div>
+            </li>
+            <li class="swiper-slide">
+              <div class="card-guide">
+                <div class="card-guide__box-img">
+                  <picture><source srcset="img/card-guide/2.webp" type="image/webp"><img src="img/card-guide/2.png" alt="img"></picture>
+                </div>
+                <div class="card-guide__box-info">
+                  <h3>Швецов Николай Борисович</h3>
+                  <p>Исполнительный директор</p>
+                </div>
+              </div>
+            </li>
+            <li class="swiper-slide">
+              <div class="card-guide">
+                <div class="card-guide__box-img">
+                  <picture><source srcset="img/card-guide/3.webp" type="image/webp"><img src="img/card-guide/3.png" alt="img"></picture>
+                </div>
+                <div class="card-guide__box-info">
+                  <h3>Шепелев Михаил Олегович</h3>
+                  <p>Начальник отдела снабжения</p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <section class="box-personnel-policy section">
+  <div class="box-personnel-policy__container container">
+    <div class="box-personnel-policy__content">
+      <div class="box-catalog__line-top section-line-top">
+        <h2 class="box-catalog__title section-title">
+          Кадровая политика
+        </h2>
+      </div>
+
+      <div class="box-personnel-policy__box-desc">
+        <p>На заводе работают 700 сотрудников. Каждый имеет возможности для профессионального и карьерного роста. Главный приоритет кадровой политики завода - безопасность и достойные условия труда.</p>
+        <p>В социальный пакет каждого сотрудника включены: полис дополнительного медицинского страхования, доставка корпоративным транспортом на работу и обратно, организация общественного питания на территории предприятия</p>
+      </div>
+
+      <div class="box-personnel-policy__box-info">
+        <ul class="list-reset">
+          <li>
+            <div class="card-percent">
+              <span class="card-percent__top">79<span>%</span></span>
+              <h3 class="card-percent__title">
+                Производственные рабочие
+              </h3>
+            </div>
+          </li>
+          <li>
+            <div class="card-percent">
+              <span class="card-percent__top">21<span>%</span></span>
+              <h3 class="card-percent__title">
+                Руководители, специалисты и служащие
+              </h3>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="box-personnel-policy__box-desc">
+        <p>Средний возраст работников завода «Нартис» составляет 35 лет, и эта цифра имеет тенденцию к снижению. Новым сотрудникам предоставляются все возможности для применения своих навыков и знаний.</p>
+      </div>
+      <div class="box-personnel-policy__box-list">
+        <ul>
+          <li>
+            <a href="#" download="#">*Сводная ведомость результатов проведения специальной оценки условий труда 2022</a>
+          </li>
+          <li>
+            <a href="#" download="#">*Сводная ведомость результатов проведения специальной оценки условий труда 2024</a>
+          </li>
+          <li>
+            <a href="#" download="#">*Перечень рекомендуемых мероприятий 2022</a>
+          </li>
+          <li>
+            <a href="#" download="#">*Перечень рекомендуемых мероприятий 2024</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+  </main>
+  <footer class="footer" id="footer">
+  <div class="footer__container container">
+    <div class="footer__line-top">
+      <ul class="box-logo list-reset">
+  <li>
+    <a href="/">
+      <svg width="169" height="32" viewBox="0 0 169 32" fill="none">
+        <use xlink:href="img/sprite.svg#mainLogo"></use>
+      </svg>
+    </a>
+  </li>
+  <li>
+    <a href="/">
+      <svg width="104" height="34" viewBox="0 0 104 34" fill="none">
+        <use xlink:href="img/sprite.svg#nekLogo"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+      <!--
+      тут не совсем понятно что делать с меню, если это будет один компонент с тем что в хедере то можно вставить разметку из хедера, но тогда не понятно что делать с пыавдающим списком. Спили прописаны на оба меню (на меню из хедера и на новое которое только к футеру относится)
+      -->
+      <!--
+      <nav class="header__nav">
+        <ul class="header__list list-reset">
+          <li>
+            <a class="nav-link" href="#">О предприятии</a>
+          </li>
+          <li>
+            <div class="drop-down-1">
+  <button class="drop-down-1__btn btn-reset">
+    <span>Продукция</span>
+    <svg width="7" height="4" viewBox="0 0 7 4" fill="none">
+      <use xlink:href="img/sprite.svg#arrowDrop1"></use>
+    </svg>
+  </button>
+  <div class="drop-down-1__box">
+    <button class="drop-down-1__btn-back btn-reset">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <use xlink:href="img/sprite.svg#arrowBackMenu"></use>
+      </svg>
+      <span>Назад в меню</span>
+    </button>
+    <ul class="drop-down-1__list list-reset">
+      <li>
+        <a class="nav-link" href="#">Приборы учета электрической энергии</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#">Счетчики воды</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#">Приборы учёта газа</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#">Коммуникационное оборудование</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#">Зарядные станции</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#">Микроконтроллеры</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#">Вспомогательные устройства</a>
+      </li>
+    </ul>
+  </div>
+</div>
+          </li>
+          <li>
+            <a class="nav-link" href="#">Пресс-центр</a>
+          </li>
+          <li>
+            <a class="nav-link" href="#">Карьера</a>
+          </li>
+          <li>
+            <a class="nav-link" href="#">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+      -->
+
+      <nav class="footer__nav">
+        <ul class="footer__list list-reset">
+          <li>
+            <a class="nav-link" href="#">О предприятии</a>
+          </li>
+          <li>
+            <a class="nav-link" href="#">Продукция</a>
+          </li>
+          <li>
+            <a class="nav-link" href="#">Пресс-центр</a>
+          </li>
+          <li>
+            <a class="nav-link" href="#">Карьера</a>
+          </li>
+          <li>
+            <a class="nav-link" href="#">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+
+
+      <address class="footer__box-address">
+        <h3 class="footer__caption">
+          Производство:
+        </h3>
+        <a href="https://yandex.ru/maps/968/cherepovets/house/severnoye_shosse_40v/Z04YfgZgSUUOQFtjfX13cXlrZg==/?ll=37.810010%2C59.160582&z=17.3"
+          class="footer__top-link">
+          Вологодская область, г. Череповец, Северное шоссе, 40В
+        </a>
+      </address>
+
+    </div>
+    <div class="footer__line-bottom">
+      <div class="footer__bottom-left">
+        <p class="footer__desc">
+          © 2025
+        </p>
+        <a href="#" class="footer__bottom-link">
+          Все права защищены
+        </a>
+        <a href="#" class="footer__bottom-link">
+          Политика в области обработки персональных данных
+        </a>
+      </div>
+      <div class="footer__bottom-right">
+        <a href="https://x2digital.ru/" class="linkX2">
+          <svg width="144" height="28" viewBox="0 0 144 28" fill="none">
+            <use xlink:href="img/sprite.svg#x2"></use>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<section class="box-preview-catalog">
+  <div class="box-preview-catalog__container container">
+    <div class="box-preview-catalog__content">
+      <div class="box-preview-catalog__line-top">
+        <h2 class="box-preview-catalog__title section-title">
+          Каталог продукции
+        </h2>
+        <a href="#" class="link-all">
+          <span class="text">Смотреть все</span>
+        </a>
+      </div>
+      <ul class="box-preview-catalog__list list-reset">
+        <li>
+          @@include('../components/card-product.html',{"name":"Приборы учета электрической энергии","urlImg":"img/card-product/1.png"})
+        </li>
+        <li>
+          @@include('../components/card-product.html',{"name":"Коммуникационное оборудование","urlImg":"img/card-product/2.png"})
+        </li>
+        <li>
+          @@include('../components/card-product.html',{"name":"Зарядные станции","urlImg":"img/card-product/3.png"})
+        </li>
+        <li>
+          @@include('../components/card-product.html',{"name":"Приборы учета воды","urlImg":"img/card-product/4.png"})
+        </li>
+        <li>
+          @@include('../components/card-product.html',{"name":"Приборы учёта газа","urlImg":"img/card-product/5.png"})
+        </li>
+        <li>
+          @@include('../components/card-product.html',{"name":"Микроконтроллеры","urlImg":"img/card-product/6.png"})
+        </li>
+        <li>
+          <div class="card-product lest-card-product">
+            <a href="#" class="card-product__link">
+              <span class="name">Вспомогательные устройства</span>
+              <img src="@@urlImg" alt="img">
+            </a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>

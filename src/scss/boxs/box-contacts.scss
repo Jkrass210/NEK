@@ -1,0 +1,133 @@
+.box-contacts {
+  &__content {
+    min-height: 516px;
+    padding: 56px;
+    border-radius: 20px;
+    background-color: var(--white);
+    display: flex;
+    gap: 24px;
+  }
+  .address {
+    font-style: normal;
+    height: auto;
+    width: calc(374 / 1256 * 100%);
+    &__list {
+      height: 100%;
+      display: flex;
+      gap: 20px;
+      flex-direction: column;
+      justify-content: space-between;
+      li {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+    }
+
+    &__title {
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: 16px;
+      color: var(--gray);
+    }
+
+    &__link {
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 120%;
+      color: var(--black);
+      transition: color 0.4s ease-in-out;
+
+      &:focus,&:focus-visible {
+        outline: none;
+      }
+
+      &:focus-visible,&:hover,&:active {
+        color: var(--orange);
+      }
+    }
+
+    &__desc {
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 125%;
+      color: var(--black);
+
+      a {
+        text-decoration: underline;
+        text-decoration-skip-ink: none;
+        color: var(--orange);
+        transition: color 0.4s ease-in-out;
+
+        &:focus,&:focus-visible {
+          outline: none;
+        }
+
+        &:focus-visible,&:hover,&:active {
+          color: var(--black);
+        }
+      }
+    }
+
+  }
+  .map {
+    border-radius: 24px;
+    overflow: hidden;
+    flex: 1px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .box-contacts {
+    &__content {
+      min-height: 436px;
+      padding: 32px;
+    }
+    .address {
+      width: calc(350 / 912 * 100%);
+      &__list {
+        li {
+          gap: 2px;
+        }
+      }
+      &__title {
+        font-size: 15px;
+      }
+      &__link {
+        font-size: 18px;
+      }
+      &__desc {
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .box-contacts {
+    &__content {
+      flex-direction: column;
+    }
+    .address {
+      width: 100%;
+    }
+    .map {
+      min-height: 300px;
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .box-contacts {
+    &__content {
+      padding: 24px;
+    }
+    .address {
+      &__list {
+        gap: 16px;
+      }
+    }
+  }
+}

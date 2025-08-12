@@ -1,0 +1,98 @@
+<section class="box-contacts section">
+  <div class="box-contacts__container container">
+    <div class="box-contacts__line-top section-line-top">
+      <h2 class="box-contacts__title section-title">
+        Контакты
+      </h2>
+    </div>
+    <div class="box-contacts__content">
+      <address class="address">
+        <ul class="address__list list-reset">
+          <li>
+            <h3 class="address__title">
+              Производство:
+            </h3>
+            <a href="https://yandex.ru/maps/968/cherepovets/house/severnoye_shosse_40v/Z04YfgZgSUUOQFtjfX13cXlrZg==/?ll=37.810010%2C59.160582&z=17.3"
+              target="_blank" class="address__link">
+              Вологодская область, г. Череповец, Северное шоссе, 40В
+            </a>
+          </li>
+          <li>
+            <h3 class="address__title">
+              Приёмная генерального директора:
+            </h3>
+            <a href="tel:+7 (8202) 20-20-27" class="address__link">
+              +7 (8202) 20-20-27
+            </a>
+            <p class="address__desc">
+              График работы: Пн. – Пт.: с 8:30 до 17:30
+            </p>
+          </li>
+          <li>
+            <h3 class="address__title">
+              Приёмная генерального директора:
+            </h3>
+            <a href="tel:+7 (8202) 20-20-27" class="address__link">
+              +7 (8202) 20-20-27
+            </a>
+            <p class="address__desc">
+              График работы: Пн. – Пт.: с 8:30 до 17:30
+            </p>
+          </li>
+          <li>
+            <h3 class="address__title">
+              Техническая поддержка:
+            </h3>
+            <a href="tel:+7 (8202) 20-15-27" class="address__link">
+              +7 (8202) 20-15-27
+            </a>
+            <p class="address__desc">
+              График работы: Пн. – Пт.: 6:30-17:30 GMT+3
+            </p>
+            <p class="address__desc">
+              Приемная e-mail: <a href="mailto:service@nartis.ru">service@nartis.ru</a>
+            </p>
+          </li>
+          <li>
+            <h3 class="address__title">
+              Отдел кадров:
+            </h3>
+            <a href="tel:+7 (8202) 20-10-88" class="address__link">
+              +7 (8202) 20-10-88
+            </a>
+            <p class="address__desc">
+              График работы: Пн. – Пт.: с 8:30 до 17:30 GMT+3
+            </p>
+          </li>
+        </ul>
+      </address>
+      <div class="map" id="map"></div>
+      <script>
+        ymaps.ready(init);
+
+        function init() {
+          const map = new ymaps.Map("map", {
+            center: [59.160582, 37.810009],
+            zoom: 15
+          });
+
+          const placemark = new ymaps.Placemark(
+            [59.160582, 37.810009],
+            {
+              hintContent: "Моя метка",
+              balloonContent: "Описание"
+            },
+            {
+              iconLayout: 'default#image',
+              iconImageHref: 'img/box-contacts/1.svg',
+              iconImageSize: [44, 44],
+              iconImageOffset: [-20, -20]
+            }
+          );
+
+          map.geoObjects.add(placemark);
+        }
+      </script>
+    </div>
+  </div>
+</section>

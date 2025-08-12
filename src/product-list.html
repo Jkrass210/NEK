@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/components/head.html',{"title":"Список товаров"})
+<body>
+  @@include('html/boxs/preloader.html')
+  @@include('html/boxs/header.html')
+  <main class="main">
+    @@include('html/components/path-1.html',{"namePage":"Каталог продукции","namePage1":"Приборы учета электрической энергии"})
+
+    @@include('html/boxs/box-product-list.html')
+
+    @@include('html/boxs/box-feedback.html',{"desc":"Связаться по вопросам сервисного и гарантийного обслуживания","textLink":"Написать"})
+
+  </main>
+  @@include('html/boxs/footer.html')
+</body>
+</html>

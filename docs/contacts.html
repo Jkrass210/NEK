@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Контакты</title>
+  <link href="css/normalize.min.css?_v=20250812123333" rel="stylesheet">
+  <link href="css/swiper-bundle.min.css?_v=20250812123333" rel="stylesheet">
+  <link href="css/style.css?_v=20250812123333" rel="stylesheet">
+
+  <script>
+    window.addEventListener('load', function () {
+      document.body.classList.remove('loading');
+      document.getElementById('preloader').style.display = 'none';
+    });
+  </script>
+
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=93db7d8d-d126-4f79-9f10-621804bddd7f&lang=ru_RU&_v=20250812123333"></script>
+  
+  <script src="js/jquery-3.6.0.min.js?_v=20250812123333" defer></script>
+  <script src="js/jquery.validate.min.js?_v=20250812123333" defer></script>
+  <script src="js/additional-methods.min.js?_v=20250812123333" defer></script>
+  <script src="js/cleave.js?_v=20250812123333" defer></script>
+  <script src="js/swiper-bundle.min.js?_v=20250812123333" defer></script>
+  <script src="js/fslightbox.js?_v=20250812123333" defer></script>
+  <script type="module" src="js/main.js?_v=20250812123333"></script>
+</head>
+
+<body>
+  <div id="preloader">
+  <div class="loader"></div>
+</div>
+  <header class="header" id="header">
+  <div class="header__container container">
+    <div class="header__content">
+      <div class="header__left">
+        <ul class="box-logo list-reset">
+  <li>
+    <a href="/">
+      <svg width="169" height="32" viewBox="0 0 169 32" fill="none">
+        <use xlink:href="img/sprite.svg#mainLogo"></use>
+      </svg>
+    </a>
+  </li>
+  <li>
+    <a href="/">
+      <svg width="104" height="34" viewBox="0 0 104 34" fill="none">
+        <use xlink:href="img/sprite.svg#nekLogo"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+        <div class="header__box-nav" for-open="burger">
+          <div class="header__mobail-box"></div>
+          <nav class="header__nav">
+            <ul class="header__list list-reset">
+              <li>
+                <a class="nav-link" href="#">О предприятии</a>
+              </li>
+              <li>
+                <div class="drop-down-1">
+  <button class="drop-down-1__btn btn-reset">
+    <span>Продукция</span>
+    <svg width="7" height="4" viewBox="0 0 7 4" fill="none">
+      <use xlink:href="img/sprite.svg#arrowDrop1"></use>
+    </svg>
+  </button>
+  <div class="drop-down-1__box">
+    <button class="drop-down-1__btn-back btn-reset">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <use xlink:href="img/sprite.svg#arrowBackMenu"></use>
+      </svg>
+      <span>Назад в меню</span>
+    </button>
+    <ul class="drop-down-1__list list-reset">
+      <li>
+        <a class="nav-link" href="#">Приборы учета электрической энергии</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#">Счетчики воды</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#">Приборы учёта газа</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#">Коммуникационное оборудование</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#">Зарядные станции</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#">Микроконтроллеры</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#">Вспомогательные устройства</a>
+      </li>
+    </ul>
+  </div>
+</div>
+              </li>
+              <li>
+                <a class="nav-link" href="#">Пресс-центр</a>
+              </li>
+              <li>
+                <a class="nav-link" href="#">Карьера</a>
+              </li>
+              <li>
+                <a class="nav-link" href="#">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+      <div class="header__right">
+        <div class="switcher">
+  <label class="switcher__label">
+    <input class="switcher__input" type="checkbox" id="languageTogg">
+    <span class="switcher__status">
+      <i>Ru</i>
+      <i>En</i>
+    </span>
+  </label>
+</div>
+        <button class="burger btn-reset" id="burger">
+  <span class="burger__icon">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+      <use xlink:href="img/sprite.svg#burger"></use>
+    </svg>
+  </span>
+
+  <span class="burger__close">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+      <use xlink:href="img/sprite.svg#burgerClose"></use>
+    </svg>
+  </span>
+</button>
+      </div>
+    </div>
+  </div>
+</header>
+  <main class="main">
+    <div class="path">
+  <div class="container">
+    <ul class="path__list list-reset">
+      <li>
+        <a href="/">Главная страница</a>
+      </li>
+      <li>
+        <a href="#">Контакты</a>
+      </li>
+    </ul>
+    <div class="path__box-back">
+      <a class="path__link-back" href="#">
+        <svg width="28" height="12" viewBox="0 0 28 12" fill="none">
+          <use xlink:href="img/sprite.svg#arrBack"></use>
+        </svg>
+        <span class="text">Вернуться назад</span>
+      </a>
+    </div>
+  </div>
+</div>
+    <section class="box-contacts section">
+  <div class="box-contacts__container container">
+    <div class="box-contacts__line-top section-line-top">
+      <h2 class="box-contacts__title section-title">
+        Контакты
+      </h2>
+    </div>
+    <div class="box-contacts__content">
+      <address class="address">
+        <ul class="address__list list-reset">
+          <li>
+            <h3 class="address__title">
+              Производство:
+            </h3>
+            <a href="https://yandex.ru/maps/968/cherepovets/house/severnoye_shosse_40v/Z04YfgZgSUUOQFtjfX13cXlrZg==/?ll=37.810010%2C59.160582&z=17.3"
+              target="_blank" class="address__link">
+              Вологодская область, г. Череповец, Северное шоссе, 40В
+            </a>
+          </li>
+          <li>
+            <h3 class="address__title">
+              Приёмная генерального директора:
+            </h3>
+            <a href="tel:+7 (8202) 20-20-27" class="address__link">
+              +7 (8202) 20-20-27
+            </a>
+            <p class="address__desc">
+              График работы: Пн. – Пт.: с 8:30 до 17:30
+            </p>
+          </li>
+          <li>
+            <h3 class="address__title">
+              Приёмная генерального директора:
+            </h3>
+            <a href="tel:+7 (8202) 20-20-27" class="address__link">
+              +7 (8202) 20-20-27
+            </a>
+            <p class="address__desc">
+              График работы: Пн. – Пт.: с 8:30 до 17:30
+            </p>
+          </li>
+          <li>
+            <h3 class="address__title">
+              Техническая поддержка:
+            </h3>
+            <a href="tel:+7 (8202) 20-15-27" class="address__link">
+              +7 (8202) 20-15-27
+            </a>
+            <p class="address__desc">
+              График работы: Пн. – Пт.: 6:30-17:30 GMT+3
+            </p>
+            <p class="address__desc">
+              Приемная e-mail: <a href="mailto:service@nartis.ru">service@nartis.ru</a>
+            </p>
+          </li>
+          <li>
+            <h3 class="address__title">
+              Отдел кадров:
+            </h3>
+            <a href="tel:+7 (8202) 20-10-88" class="address__link">
+              +7 (8202) 20-10-88
+            </a>
+            <p class="address__desc">
+              График работы: Пн. – Пт.: с 8:30 до 17:30 GMT+3
+            </p>
+          </li>
+        </ul>
+      </address>
+      <div class="map" id="map"></div>
+      <script>
+        ymaps.ready(init);
+
+        function init() {
+          const map = new ymaps.Map("map", {
+            center: [59.160582, 37.810009],
+            zoom: 15
+          });
+
+          const placemark = new ymaps.Placemark(
+            [59.160582, 37.810009],
+            {
+              hintContent: "Моя метка",
+              balloonContent: "Описание"
+            },
+            {
+              iconLayout: 'default#image',
+              iconImageHref: 'img/box-contacts/1.svg',
+              iconImageSize: [44, 44],
+              iconImageOffset: [-20, -20]
+            }
+          );
+
+          map.geoObjects.add(placemark);
+        }
+      </script>
+    </div>
+  </div>
+</section>
+    <section class="box-feedback section">
+  <div class="box-feedback__container container">
+    <div class="box-feedback__content">
+      <p>
+        Связаться по вопросам сервисного и гарантийного обслуживания
+      </p>
+      <a href="#">
+        Написать
+      </a>
+    </div>
+  </div>
+</section>
+  </main>
+  <footer class="footer" id="footer">
+  <div class="footer__container container">
+    <div class="footer__line-top">
+      <ul class="box-logo list-reset">
+  <li>
+    <a href="/">
+      <svg width="169" height="32" viewBox="0 0 169 32" fill="none">
+        <use xlink:href="img/sprite.svg#mainLogo"></use>
+      </svg>
+    </a>
+  </li>
+  <li>
+    <a href="/">
+      <svg width="104" height="34" viewBox="0 0 104 34" fill="none">
+        <use xlink:href="img/sprite.svg#nekLogo"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+      <!--
+      тут не совсем понятно что делать с меню, если это будет один компонент с тем что в хедере то можно вставить разметку из хедера, но тогда не понятно что делать с пыавдающим списком. Спили прописаны на оба меню (на меню из хедера и на новое которое только к футеру относится)
+      -->
+      <!--
+      <nav class="header__nav">
+        <ul class="header__list list-reset">
+          <li>
+            <a class="nav-link" href="#">О предприятии</a>
+          </li>
+          <li>
+            <div class="drop-down-1">
+  <button class="drop-down-1__btn btn-reset">
+    <span>Продукция</span>
+    <svg width="7" height="4" viewBox="0 0 7 4" fill="none">
+      <use xlink:href="img/sprite.svg#arrowDrop1"></use>
+    </svg>
+  </button>
+  <div class="drop-down-1__box">
+    <button class="drop-down-1__btn-back btn-reset">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <use xlink:href="img/sprite.svg#arrowBackMenu"></use>
+      </svg>
+      <span>Назад в меню</span>
+    </button>
+    <ul class="drop-down-1__list list-reset">
+      <li>
+        <a class="nav-link" href="#">Приборы учета электрической энергии</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#">Счетчики воды</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#">Приборы учёта газа</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#">Коммуникационное оборудование</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#">Зарядные станции</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#">Микроконтроллеры</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#">Вспомогательные устройства</a>
+      </li>
+    </ul>
+  </div>
+</div>
+          </li>
+          <li>
+            <a class="nav-link" href="#">Пресс-центр</a>
+          </li>
+          <li>
+            <a class="nav-link" href="#">Карьера</a>
+          </li>
+          <li>
+            <a class="nav-link" href="#">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+      -->
+
+      <nav class="footer__nav">
+        <ul class="footer__list list-reset">
+          <li>
+            <a class="nav-link" href="#">О предприятии</a>
+          </li>
+          <li>
+            <a class="nav-link" href="#">Продукция</a>
+          </li>
+          <li>
+            <a class="nav-link" href="#">Пресс-центр</a>
+          </li>
+          <li>
+            <a class="nav-link" href="#">Карьера</a>
+          </li>
+          <li>
+            <a class="nav-link" href="#">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+
+
+      <address class="footer__box-address">
+        <h3 class="footer__caption">
+          Производство:
+        </h3>
+        <a href="https://yandex.ru/maps/968/cherepovets/house/severnoye_shosse_40v/Z04YfgZgSUUOQFtjfX13cXlrZg==/?ll=37.810010%2C59.160582&z=17.3"
+          class="footer__top-link">
+          Вологодская область, г. Череповец, Северное шоссе, 40В
+        </a>
+      </address>
+
+    </div>
+    <div class="footer__line-bottom">
+      <div class="footer__bottom-left">
+        <p class="footer__desc">
+          © 2025
+        </p>
+        <a href="#" class="footer__bottom-link">
+          Все права защищены
+        </a>
+        <a href="#" class="footer__bottom-link">
+          Политика в области обработки персональных данных
+        </a>
+      </div>
+      <div class="footer__bottom-right">
+        <a href="https://x2digital.ru/" class="linkX2">
+          <svg width="144" height="28" viewBox="0 0 144 28" fill="none">
+            <use xlink:href="img/sprite.svg#x2"></use>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

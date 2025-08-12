@@ -1,0 +1,130 @@
+.box-personnel-policy {
+  &__content {
+    border-radius: 20px;
+    padding: 44px;
+    overflow: hidden;
+    background-color: var(--gray-150);
+    background-image: url(../img/box-personnel-policy/ornament.png);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+  }
+
+  &__box-desc {
+    margin-bottom: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    p {
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: 17px;
+      line-height: 135%;
+      color: var(--black);
+    }
+  }
+
+  &__box-info {
+    padding-top: 12px;
+    margin-bottom: 24px;
+
+    ul {
+      display: flex;
+
+      li {
+        flex: 1;
+      }
+    }
+  }
+
+  &__box-list {
+    ul {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+
+      a {
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 135%;
+        text-decoration: underline;
+        text-decoration-skip-ink: none;
+        color: var(--gray);
+        transition: color 0.4s ease-in-out;
+
+        &:focus,
+        &:focus-visible {
+          outline: none;
+        }
+
+        &:focus-visible,
+        &:hover,
+        &:active {
+          color: var(--black);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .box-personnel-policy {
+    &__content {
+      padding: 32px;
+      background-image: url(../img/box-personnel-policy/ornament1100.png);
+    }
+
+    &__box-info {
+      padding-top: 8px;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .box-personnel-policy {
+    &__box-info {
+      ul {
+        flex-direction: column;
+      }
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .box-personnel-policy {
+    &__content {
+      padding: 24px;
+      background-image: url("../img/box-personnel-policy/ornament-top550.png"),
+        url("../img/box-personnel-policy/ornament-bot550.png");
+      background-repeat: no-repeat, no-repeat;
+      background-position: left top, right bottom;
+    }
+
+    &__box-desc {
+      p {
+        font-size: 16px;
+        line-height: 137%;
+      }
+    }
+
+    &__box-info {
+      padding-top: 4px;
+      margin-bottom: 16px;
+
+      ul {
+        gap: 20px;
+      }
+    }
+
+    &__box-list {
+      ul {
+        a {
+          font-size: 16px;
+          line-height: 150%;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,100 @@
+.card-desc-product-list {
+  padding: 28px;
+  height: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: var(--gray-150);
+  background-image: url(../img/card-desc-product-list/ornament.png);
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: contain;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 135%;
+  color: var(--black);
+
+  p {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 135%;
+    color: var(--black);
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding-left: 44px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 141%;
+    color: var(--black);
+
+    li {
+      position: relative;
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 133%;
+      color: var(--black);
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 11px;
+        left: -36px;
+        border-radius: 50px;
+        width: 24px;
+        min-width: 24px;
+        height: 2px;
+        background-color: var(--orange);
+      }
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .card-desc-product-list {
+    padding: 24px;
+    background-image: url(../img/card-desc-product-list/ornament1024.png);
+  }
+}
+
+@media (max-width: 1000px) {
+  .card-desc-product-list {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 550px) {
+  .card-desc-product-list {
+    background-position: left top;
+    background-size: contain;
+    background-image: url(../img/card-desc-product-list/ornament360.png);
+    font-size: 16px;
+    line-height: 137%;
+
+    p {
+      font-size: 16px;
+      line-height: 137%;
+    }
+
+    ul {
+      font-size: 16px;
+      line-height: 137%;
+
+      li {
+        font-size: 16px;
+        line-height: 137%;
+      }
+    }
+  }
+}
