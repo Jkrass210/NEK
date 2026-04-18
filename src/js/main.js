@@ -12,6 +12,11 @@ import { validateForm1 } from './module/validateForm1.js';
 import { initGuideSwiper } from './module/initGuideSwiper.js';
 import { initDetailedNewsSliders } from './module/initDetailedNewsSliders.js';
 import { initDetailedProductSwipers } from './module/initDetailedProductSwipers.js';
+import { initDownloadBtn } from './module/initDownloadBtn.js';
+import { initTabsInfo } from './module/initTabsInfo.js';
+import { initResponsiveContent } from './module/initResponsiveContent.js';
+import { initJobSliders } from './module/initJobSliders.js';
+import { initResponsiveSwiper } from './module/initResponsiveSwiper.js';
 
 testWebP(function (support) {
   if (support == true) {
@@ -46,13 +51,17 @@ if (document.querySelectorAll('.counter').length) {
   counterAnim()
 }
 
-if (document.querySelector('.about-swiper') && window.innerWidth >= 550) {
+/*if (document.querySelector('.about-swiper') && window.innerWidth >= 550) {
   initAboutSwiper();
 } else {
   const bottomElement = document.querySelector('.box-about .bottom');
   if (bottomElement) {
     bottomElement.remove();
   }
+}*/
+
+if (document.querySelector('.about-swiper')) {
+  initAboutSwiper();
 }
 
 if (document.querySelector('.box-about__mobil-wrapper-link')) {
@@ -95,4 +104,46 @@ if (document.querySelectorAll('.box-news-detailed__swiper').length) {
 
 if (document.querySelectorAll('.detailed-product-swiper').length) {
   initDetailedProductSwipers();
+}
+
+if (document.querySelectorAll('.btn-download').length) {
+  initDownloadBtn()
+}
+
+if (document.querySelectorAll('.box-feedback').length) {
+  initDownloadBtn({
+  parentSelector: '.box-feedback',
+  btnSelector: '.box-feedback__btn',
+  modalSelector: '.popup-modal',
+  closeBtnSelector: '.close',
+  windowSelector: '.popup-modal__window',
+  activeClass: 'active'
+});
+}
+
+if (document.querySelectorAll('.box-feedback-jop').length) {
+  initDownloadBtn({
+  parentSelector: '.box-feedback-jop',
+  btnSelector: '.box-feedback-jop__btn',
+  modalSelector: '.popup-modal',
+  closeBtnSelector: '.close',
+  windowSelector: '.popup-modal__window',
+  activeClass: 'active'
+});
+}
+
+if (document.querySelectorAll('.content__box-info').length) {
+  initTabsInfo()
+}
+
+if (document.querySelector('.content__line-top-mobile')) {
+  initResponsiveContent()
+}
+
+if (document.querySelectorAll('.open-jop-swiper').length) {
+  initJobSliders()
+}
+
+if (document.querySelectorAll('.open-jop-about-swiper').length) {
+  initResponsiveSwiper()
 }

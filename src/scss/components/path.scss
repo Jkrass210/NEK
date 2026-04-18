@@ -3,8 +3,12 @@
   padding-bottom: 32px;
   &__list {
     display: flex;
-    flex-wrap: wrap;
+    overflow: hidden;
     li {
+      &:last-child {
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
       a {
         font-family: var(--font-family);
         font-weight: 400;
@@ -13,6 +17,7 @@
         line-height: 143%;
         color: var(--gray);
         transition: color 0.4s ease-in-out;
+        
         &:focus,&:focus-visible {
           outline: none;
         }

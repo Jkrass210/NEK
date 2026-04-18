@@ -4,9 +4,57 @@
       <p>
         @@desc
       </p>
-      <a href="#">
+      <button class="box-feedback__btn btn-reset" href="#">
         @@textLink
-      </a>
+      </button>
+
+      <div class="box-feedback__popup-modal popup-modal">
+        <div class="popup-modal__window">
+          <div class="box-feedback__modal-scroll">
+            <div>
+              <div class="form-1">
+                <form method="post" action="#" id="serviceForm">
+                  <h3 class="form-1__title">
+                    Связаться по вопросам сервисного и гарантийного обслуживания
+                  </h3>
+                  <ul class="form-1__input-group list-reset">
+                    <li>
+                      <input class="form-1__input" type="text" name="name" placeholder="ФИО" required>
+                    </li>
+                    <li>
+                      <input class="form-1__input" type="text" name="nameCompany" placeholder="Наименование компании"
+                        required>
+                    </li>
+                    <li>
+                      <input class="form-1__input" type="text" name="post" placeholder="Должность" required>
+                    </li>
+                    <li>
+                      <input class="form-1__input" type="text" name="mail" placeholder="Адрес электронной почты"
+                        required>
+                    </li>
+                    <li>
+                      <textarea class="form-1__textarea" style="resize: none;" name="problemDescription"
+                        placeholder="Полное наименование используемых изделий, полное описание проблемы (по возможности — пошаговое описание действий для воспроизведения описываемой проблемы). Любая сопутствующая информация, которая может быть важна для анализа запроса."
+                        required></textarea>
+                    </li>
+                  </ul>
+                  <div class="form-1__btn-group">
+                    <button type="submit" class="form-1__submit btn-reset">Отправить сообщение</button>
+                    <p>Нажимая кнопку «Отправить сообщение», вы даете согласие на <a href="#">обработку персональных
+                        данных</a></p>
+                  </div>
+                </form>
+              </div>
+              <button class="btn-download__close btn-reset close">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <use xlink:href="img/sprite.svg#closeDownload"></use>
+                </svg>
+                <span class="text">Закрыть</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>

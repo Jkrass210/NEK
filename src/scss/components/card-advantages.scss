@@ -1,0 +1,113 @@
+.card-advantages {
+  height: 100%;
+  min-height: 248px;
+  padding: 24px;
+  border-radius: 20px;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  justify-content: space-between;
+  background: var(--white);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &.img-1 {
+    background-image: url(../img/card-advantages/1.png);
+  }
+
+  &.img-2 {
+    background-image: url(../img/card-advantages/2.png);
+  }
+
+  &.img-3 {
+    background-image: url(../img/card-advantages/3.png);
+  }
+
+  &.img-4 {
+    background-image: url(../img/card-advantages/4.png);
+  }
+
+  &.img-5 {
+    background-image: url(../img/card-advantages/5.png);
+  }
+
+  &__title {
+    max-width: 86%;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 24px;
+    color: var(--black);
+  }
+
+  &__desc {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 129%;
+    color: var(--black);
+  }
+}
+
+@media (max-width: 1100px) {
+  .card-advantages {
+    min-height: 226px;
+
+    &.img-1 {
+      background-image: url(../img/card-advantages/1-1100.png);
+    }
+
+    &.img-2 {
+      background-image: url(../img/card-advantages/2-1100.png);
+    }
+
+    &.img-3 {
+      background-image: url(../img/card-advantages/3-1100.png);
+    }
+
+    &.img-4 {
+      background-image: url(../img/card-advantages/4-1100.png);
+    }
+
+    &.img-5 {
+      background-image: url(../img/card-advantages/5-1100.png);
+    }
+
+    &__title {
+      font-size: 20px;
+    }
+
+    &__desc {
+      font-size: 16px;
+      line-height: 137%;
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .card-advantages {
+    margin: 0 auto;
+    max-width: 500px;
+    min-height: 226px;
+
+    &.img-1 {
+      background-image: url(../img/card-advantages/1-1000.png);
+    }
+
+    &.img-2 {
+      background-image: url(../img/card-advantages/2-1000.png);
+    }
+
+    &.img-3 {
+      background-image: url(../img/card-advantages/3-1000.png);
+    }
+
+    &.img-4 {
+      background-image: url(../img/card-advantages/4-1000.png);
+    }
+
+    &.img-5 {
+      background-image: url(../img/card-advantages/5-1000.png);
+    }
+
+  }
+}

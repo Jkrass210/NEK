@@ -1,0 +1,35 @@
+.box-advantages {
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+
+    li {
+      grid-column: span 2;
+
+      &:nth-last-child(2),
+      &:last-child {
+        grid-column: span 3;
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .box-advantages {
+    &__list {
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+
+    li {
+      grid-column: span 1;
+
+      &:nth-last-child(2),
+      &:last-child {
+        grid-column: span 1;
+      }
+    }
+
+  }
+}

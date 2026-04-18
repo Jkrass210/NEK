@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Список товаров</title>
-  <link href="css/normalize.min.css?_v=20250812123333" rel="stylesheet">
-  <link href="css/swiper-bundle.min.css?_v=20250812123333" rel="stylesheet">
-  <link href="css/style.css?_v=20250812123333" rel="stylesheet">
+  <link href="css/normalize.min.css?_v=20260112175431" rel="stylesheet">
+  <link href="css/swiper-bundle.min.css?_v=20260112175431" rel="stylesheet">
+  <link href="css/style.css?_v=20260112175431" rel="stylesheet">
 
   <script>
     window.addEventListener('load', function () {
@@ -15,15 +15,15 @@
     });
   </script>
 
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=93db7d8d-d126-4f79-9f10-621804bddd7f&lang=ru_RU&_v=20250812123333"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=93db7d8d-d126-4f79-9f10-621804bddd7f&lang=ru_RU&_v=20260112175431"></script>
   
-  <script src="js/jquery-3.6.0.min.js?_v=20250812123333" defer></script>
-  <script src="js/jquery.validate.min.js?_v=20250812123333" defer></script>
-  <script src="js/additional-methods.min.js?_v=20250812123333" defer></script>
-  <script src="js/cleave.js?_v=20250812123333" defer></script>
-  <script src="js/swiper-bundle.min.js?_v=20250812123333" defer></script>
-  <script src="js/fslightbox.js?_v=20250812123333" defer></script>
-  <script type="module" src="js/main.js?_v=20250812123333"></script>
+  <script src="js/jquery-3.6.0.min.js?_v=20260112175431" defer></script>
+  <script src="js/jquery.validate.min.js?_v=20260112175431" defer></script>
+  <script src="js/additional-methods.min.js?_v=20260112175431" defer></script>
+  <script src="js/cleave.js?_v=20260112175431" defer></script>
+  <script src="js/swiper-bundle.min.js?_v=20260112175431" defer></script>
+  <script src="js/fslightbox.js?_v=20260112175431" defer></script>
+  <script type="module" src="js/main.js?_v=20260112175431"></script>
 </head>
 
 <body>
@@ -34,7 +34,7 @@
   <div class="header__container container">
     <div class="header__content">
       <div class="header__left">
-        <ul class="box-logo list-reset">
+        <!--<ul class="box-logo list-reset">
   <li>
     <a href="/">
       <svg width="169" height="32" viewBox="0 0 169 32" fill="none">
@@ -49,7 +49,12 @@
       </svg>
     </a>
   </li>
-</ul>
+</ul>-->
+<div class="box-logo-new">
+  <a class="box-logo-new_nek" href="/"></a>
+  <a class="box-logo-new_natr" href="/"></a>
+  <img src="img/logo/logoNEW.svg" alt="logo">
+</div>
         <div class="header__box-nav" for-open="burger">
           <div class="header__mobail-box"></div>
           <nav class="header__nav">
@@ -287,9 +292,57 @@
       <p>
         Связаться по вопросам сервисного и гарантийного обслуживания
       </p>
-      <a href="#">
+      <button class="box-feedback__btn btn-reset" href="#">
         Написать
-      </a>
+      </button>
+
+      <div class="box-feedback__popup-modal popup-modal">
+        <div class="popup-modal__window">
+          <div class="box-feedback__modal-scroll">
+            <div>
+              <div class="form-1">
+                <form method="post" action="#" id="serviceForm">
+                  <h3 class="form-1__title">
+                    Связаться по вопросам сервисного и гарантийного обслуживания
+                  </h3>
+                  <ul class="form-1__input-group list-reset">
+                    <li>
+                      <input class="form-1__input" type="text" name="name" placeholder="ФИО" required>
+                    </li>
+                    <li>
+                      <input class="form-1__input" type="text" name="nameCompany" placeholder="Наименование компании"
+                        required>
+                    </li>
+                    <li>
+                      <input class="form-1__input" type="text" name="post" placeholder="Должность" required>
+                    </li>
+                    <li>
+                      <input class="form-1__input" type="text" name="mail" placeholder="Адрес электронной почты"
+                        required>
+                    </li>
+                    <li>
+                      <textarea class="form-1__textarea" style="resize: none;" name="problemDescription"
+                        placeholder="Полное наименование используемых изделий, полное описание проблемы (по возможности — пошаговое описание действий для воспроизведения описываемой проблемы). Любая сопутствующая информация, которая может быть важна для анализа запроса."
+                        required></textarea>
+                    </li>
+                  </ul>
+                  <div class="form-1__btn-group">
+                    <button type="submit" class="form-1__submit btn-reset">Отправить сообщение</button>
+                    <p>Нажимая кнопку «Отправить сообщение», вы даете согласие на <a href="#">обработку персональных
+                        данных</a></p>
+                  </div>
+                </form>
+              </div>
+              <button class="btn-download__close btn-reset close">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <use xlink:href="img/sprite.svg#closeDownload"></use>
+                </svg>
+                <span class="text">Закрыть</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -298,7 +351,7 @@
   <footer class="footer" id="footer">
   <div class="footer__container container">
     <div class="footer__line-top">
-      <ul class="box-logo list-reset">
+      <!--<ul class="box-logo list-reset">
   <li>
     <a href="/">
       <svg width="169" height="32" viewBox="0 0 169 32" fill="none">
@@ -313,7 +366,12 @@
       </svg>
     </a>
   </li>
-</ul>
+</ul>-->
+<div class="box-logo-new">
+  <a class="box-logo-new_nek" href="/"></a>
+  <a class="box-logo-new_natr" href="/"></a>
+  <img src="img/logo/logoNEW.svg" alt="logo">
+</div>
       <!--
       тут не совсем понятно что делать с меню, если это будет один компонент с тем что в хедере то можно вставить разметку из хедера, но тогда не понятно что делать с пыавдающим списком. Спили прописаны на оба меню (на меню из хедера и на новое которое только к футеру относится)
       -->

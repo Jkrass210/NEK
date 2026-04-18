@@ -1,0 +1,65 @@
+.card-loppk {
+  height: 100%;
+  min-height: 226px;
+  padding: 28px;
+  border-radius: 20px;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 11px;
+  &__top {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  &__box-icon {
+    margin: -5px -8px 0;
+    .icon {
+      width: 52px;
+      min-width: 52px;
+      height: 52px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 100%;
+      background-color: var(--gray-100);
+    }
+  }
+  &__title {
+    color: var(--black);
+    font-family: var(--font-family);
+    font-size: 21px;
+    font-style: normal;
+    font-weight: 450;
+    line-height: 114.286%;
+  }
+  &__desc {
+    color: var(--gray);
+    font-family: var(--font-family);
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 450;
+    line-height: 117.647%;
+  }
+}
+
+@media (max-width: 1100px) {
+  .card-loppk {
+    padding: 28px 30px 34px 28px;
+    min-height: 248px;
+    padding: 24px;
+    gap: 16px;
+    &__box-icon {
+      margin: 0;
+    }
+    &__title {
+      font-size: 18px;
+      line-height: 122.222%;
+    }
+    &__desc {
+      font-size: 16px;
+      line-height: 118.75%;
+    }
+  }
+}

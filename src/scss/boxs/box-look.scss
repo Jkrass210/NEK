@@ -1,0 +1,27 @@
+.box-look {
+  &__line-title {
+    margin-bottom: 32px;
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .box-look {
+    &__line-title {
+      margin-bottom: 24px;
+    }
+    &__list {
+      gap: 20px;
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .box-look {
+    display: none;
+  }
+}

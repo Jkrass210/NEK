@@ -7,7 +7,6 @@
   &-top {
     border-radius: 20px;
     overflow: hidden;
-    margin-bottom: 11px;
 
     &__btn-group {
       position: absolute;
@@ -164,4 +163,17 @@
     }
   }
 
+}
+
+@media (max-width: 550px) {
+  .about-swiper {
+    &-top {
+      &-wrapp {
+        min-height: 264px;
+      }
+      &__btn-group {
+        gap: 4px;
+      }
+    }
+  }
 }

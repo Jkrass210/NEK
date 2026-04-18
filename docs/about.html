@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>О предприятии</title>
-  <link href="css/normalize.min.css?_v=20250812123333" rel="stylesheet">
-  <link href="css/swiper-bundle.min.css?_v=20250812123333" rel="stylesheet">
-  <link href="css/style.css?_v=20250812123333" rel="stylesheet">
+  <link href="css/normalize.min.css?_v=20260112175431" rel="stylesheet">
+  <link href="css/swiper-bundle.min.css?_v=20260112175431" rel="stylesheet">
+  <link href="css/style.css?_v=20260112175431" rel="stylesheet">
 
   <script>
     window.addEventListener('load', function () {
@@ -15,15 +15,15 @@
     });
   </script>
 
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=93db7d8d-d126-4f79-9f10-621804bddd7f&lang=ru_RU&_v=20250812123333"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=93db7d8d-d126-4f79-9f10-621804bddd7f&lang=ru_RU&_v=20260112175431"></script>
   
-  <script src="js/jquery-3.6.0.min.js?_v=20250812123333" defer></script>
-  <script src="js/jquery.validate.min.js?_v=20250812123333" defer></script>
-  <script src="js/additional-methods.min.js?_v=20250812123333" defer></script>
-  <script src="js/cleave.js?_v=20250812123333" defer></script>
-  <script src="js/swiper-bundle.min.js?_v=20250812123333" defer></script>
-  <script src="js/fslightbox.js?_v=20250812123333" defer></script>
-  <script type="module" src="js/main.js?_v=20250812123333"></script>
+  <script src="js/jquery-3.6.0.min.js?_v=20260112175431" defer></script>
+  <script src="js/jquery.validate.min.js?_v=20260112175431" defer></script>
+  <script src="js/additional-methods.min.js?_v=20260112175431" defer></script>
+  <script src="js/cleave.js?_v=20260112175431" defer></script>
+  <script src="js/swiper-bundle.min.js?_v=20260112175431" defer></script>
+  <script src="js/fslightbox.js?_v=20260112175431" defer></script>
+  <script type="module" src="js/main.js?_v=20260112175431"></script>
 </head>
 
 <body>
@@ -34,7 +34,7 @@
   <div class="header__container container">
     <div class="header__content">
       <div class="header__left">
-        <ul class="box-logo list-reset">
+        <!--<ul class="box-logo list-reset">
   <li>
     <a href="/">
       <svg width="169" height="32" viewBox="0 0 169 32" fill="none">
@@ -49,7 +49,12 @@
       </svg>
     </a>
   </li>
-</ul>
+</ul>-->
+<div class="box-logo-new">
+  <a class="box-logo-new_nek" href="/"></a>
+  <a class="box-logo-new_natr" href="/"></a>
+  <img src="img/logo/logoNEW.svg" alt="logo">
+</div>
         <div class="header__box-nav" for-open="burger">
           <div class="header__mobail-box"></div>
           <nav class="header__nav">
@@ -181,10 +186,52 @@
             <img src="img/page-about/1.jpg" alt="img">
           </picture>
         </div>
+        <div class="page-about__box-info">
+          <p>
+            «НАРТИС» — ведущий производитель интеллектуальных средств измерения, управления и радиоэлектроники. Выпускаем оборудование, способствующее модернизации энергетической инфраструктуры страны. Занимаем лидирующие позиции в России по производству интеллектуальных приборов учёта электроэнергии.
+          </p>
+          <p>
+            Завод расположен в г. Череповец по адресу: Индустриальный парк, Северное шоссе, 40В, ТОСЭР.
+          </p>
+        </div>
+
+        <div class="page-about__box-points">
+          <ul class="page-about__list list-reset">
+            <li>
+              <div class="card-point">
+                <h3 class="card-point__title">
+                  Входим в промышленную Группу «НЭК»
+                </h3>
+                <p class="card-point__desc">
+                  Объединение технологических компаний, создающих инновационные отечественные продукты и предоставляющих комплексные услуги в сфере электроэнергетики.
+                </p>
+              </div>
+            </li>
+            <li>
+              <div class="card-point">
+                <h3 class="card-point__title">
+                  Собственная инженерная экспертиза технического партнёра — «НЭК.ТЕХ»
+                </h3>
+                <p class="card-point__desc">
+                  Обеспечивает разработку новых решений, модернизацию продуктов и внедрение современных цифровых технологий.
+                </p>
+              </div>
+            </li>
+            <li>
+              <div class="card-point">
+                <h3 class="card-point__title">
+                  Импортонезависимость и развитие российских технологий
+                </h3>
+                <p class="card-point__desc">
+                  Высокая степень локализации производства. «НАРТИС» - завод полного цикла по производству отечественных приборов учёта: от разработки до сервисного обслуживания.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
 
         <div class="page-about__box-info">
-          <p>Завод расположен в г. Череповец по адресу: Индустриальный парк, Северное шоссе, 40В, территория опережающего социально-экономического развития (ТОСЭР)</p>
-          <p>Производственная мощность <span>-2.5 млн</span> прибора учета в год.</p>
+          <p>Завод выпускает следующие приборы:</p>
           <ul>
             <li>
               Однофазные и трехфазные (прямого, полукосвенного и косвенного включения) интеллектуальные приборы учета электроэнергии, которые соответствуют требованиям ФЗ-552 и постановления Правительства РФ «Об утверждении правил предоставления доступа к минимальному набору функций ИСУ электрической энергии(мощности)».
@@ -276,63 +323,6 @@
   </div>
 </section>
 
-    <section class="box-counter">
-  <div class="box-counter__container container">
-    <div class="box-counter__content">
-      <ul class="box-counter__list list-reset">
-        <li>
-          <div class="card-counter">
-            <span class="card-counter__box-img">
-              <img class="card-counter__img" src="img/box-counter/1.svg" alt="svg">
-            </span>
-            <div class="counter">
-              <p class="counter__number hide">700<span>сотрудников</span></p>
-              <p class="counter__number number">0<span>сотрудников</span></p>
-              <span class="counter__desc">Специалистов и профессионалов в своих областях деятельности и производства</span>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="card-counter">
-            <span class="card-counter__box-img">
-              <img class="card-counter__img" src="img/box-counter/2.svg" alt="svg">
-            </span>
-            <div class="counter">
-              <p class="counter__number hide">2.5<span>млн</span></p>
-              <p class="counter__number number">0<span>млн</span></p>
-              <span class="counter__desc">Приборов учета в год —производственная мощность предприятия</span>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="card-counter">
-            <span class="card-counter__box-img">
-              <img class="card-counter__img" src="img/box-counter/3.svg" alt="svg">
-            </span>
-            <div class="counter">
-              <p class="counter__number hide">6300<span>м²</span></p>
-              <p class="counter__number number">0<span>м²</span></p>
-              <span class="counter__desc">Общая площадь производственных помещений</span>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="card-counter">
-            <span class="card-counter__box-img">
-              <img class="card-counter__img" src="img/box-counter/4.svg" alt="svg">
-            </span>
-            <div class="counter">
-              <p class="counter__number hide">8<span>этапов</span></p>
-              <p class="counter__number number">0<span>этапов</span></p>
-              <span class="counter__desc">Общая площадь производственных помещений</span>
-            </div>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </div>
-</section>
-
     <section class="box-guide section">
   <div class="box-guide__content">
     <div class="container">
@@ -395,68 +385,11 @@
   </div>
 </section>
 
-    <section class="box-personnel-policy section">
-  <div class="box-personnel-policy__container container">
-    <div class="box-personnel-policy__content">
-      <div class="box-catalog__line-top section-line-top">
-        <h2 class="box-catalog__title section-title">
-          Кадровая политика
-        </h2>
-      </div>
-
-      <div class="box-personnel-policy__box-desc">
-        <p>На заводе работают 700 сотрудников. Каждый имеет возможности для профессионального и карьерного роста. Главный приоритет кадровой политики завода - безопасность и достойные условия труда.</p>
-        <p>В социальный пакет каждого сотрудника включены: полис дополнительного медицинского страхования, доставка корпоративным транспортом на работу и обратно, организация общественного питания на территории предприятия</p>
-      </div>
-
-      <div class="box-personnel-policy__box-info">
-        <ul class="list-reset">
-          <li>
-            <div class="card-percent">
-              <span class="card-percent__top">79<span>%</span></span>
-              <h3 class="card-percent__title">
-                Производственные рабочие
-              </h3>
-            </div>
-          </li>
-          <li>
-            <div class="card-percent">
-              <span class="card-percent__top">21<span>%</span></span>
-              <h3 class="card-percent__title">
-                Руководители, специалисты и служащие
-              </h3>
-            </div>
-          </li>
-        </ul>
-      </div>
-
-      <div class="box-personnel-policy__box-desc">
-        <p>Средний возраст работников завода «Нартис» составляет 35 лет, и эта цифра имеет тенденцию к снижению. Новым сотрудникам предоставляются все возможности для применения своих навыков и знаний.</p>
-      </div>
-      <div class="box-personnel-policy__box-list">
-        <ul>
-          <li>
-            <a href="#" download="#">*Сводная ведомость результатов проведения специальной оценки условий труда 2022</a>
-          </li>
-          <li>
-            <a href="#" download="#">*Сводная ведомость результатов проведения специальной оценки условий труда 2024</a>
-          </li>
-          <li>
-            <a href="#" download="#">*Перечень рекомендуемых мероприятий 2022</a>
-          </li>
-          <li>
-            <a href="#" download="#">*Перечень рекомендуемых мероприятий 2024</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
   </main>
   <footer class="footer" id="footer">
   <div class="footer__container container">
     <div class="footer__line-top">
-      <ul class="box-logo list-reset">
+      <!--<ul class="box-logo list-reset">
   <li>
     <a href="/">
       <svg width="169" height="32" viewBox="0 0 169 32" fill="none">
@@ -471,7 +404,12 @@
       </svg>
     </a>
   </li>
-</ul>
+</ul>-->
+<div class="box-logo-new">
+  <a class="box-logo-new_nek" href="/"></a>
+  <a class="box-logo-new_natr" href="/"></a>
+  <img src="img/logo/logoNEW.svg" alt="logo">
+</div>
       <!--
       тут не совсем понятно что делать с меню, если это будет один компонент с тем что в хедере то можно вставить разметку из хедера, но тогда не понятно что делать с пыавдающим списком. Спили прописаны на оба меню (на меню из хедера и на новое которое только к футеру относится)
       -->

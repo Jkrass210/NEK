@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Карьера</title>
+  <link href="css/normalize.min.css?_v=20260112175431" rel="stylesheet">
+  <link href="css/swiper-bundle.min.css?_v=20260112175431" rel="stylesheet">
+  <link href="css/style.css?_v=20260112175431" rel="stylesheet">
+
+  <script>
+    window.addEventListener('load', function () {
+      document.body.classList.remove('loading');
+      document.getElementById('preloader').style.display = 'none';
+    });
+  </script>
+
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=93db7d8d-d126-4f79-9f10-621804bddd7f&lang=ru_RU&_v=20260112175431"></script>
+  
+  <script src="js/jquery-3.6.0.min.js?_v=20260112175431" defer></script>
+  <script src="js/jquery.validate.min.js?_v=20260112175431" defer></script>
+  <script src="js/additional-methods.min.js?_v=20260112175431" defer></script>
+  <script src="js/cleave.js?_v=20260112175431" defer></script>
+  <script src="js/swiper-bundle.min.js?_v=20260112175431" defer></script>
+  <script src="js/fslightbox.js?_v=20260112175431" defer></script>
+  <script type="module" src="js/main.js?_v=20260112175431"></script>
+</head>
+
+<body>
+  <div id="preloader">
+  <div class="loader"></div>
+</div>
+  <header class="header" id="header">
+  <div class="header__container container">
+    <div class="header__content">
+      <div class="header__left">
+        <!--<ul class="box-logo list-reset">
+  <li>
+    <a href="/">
+      <svg width="169" height="32" viewBox="0 0 169 32" fill="none">
+        <use xlink:href="img/sprite.svg#mainLogo"></use>
+      </svg>
+    </a>
+  </li>
+  <li>
+    <a href="/">
+      <svg width="104" height="34" viewBox="0 0 104 34" fill="none">
+        <use xlink:href="img/sprite.svg#nekLogo"></use>
+      </svg>
+    </a>
+  </li>
+</ul>-->
+<div class="box-logo-new">
+  <a class="box-logo-new_nek" href="/"></a>
+  <a class="box-logo-new_natr" href="/"></a>
+  <img src="img/logo/logoNEW.svg" alt="logo">
+</div>
+        <div class="header__box-nav" for-open="burger">
+          <div class="header__mobail-box"></div>
+          <nav class="header__nav">
+            <ul class="header__list list-reset">
+              <li>
+                <a class="nav-link" href="#">О предприятии</a>
+              </li>
+              <li>
+                <div class="drop-down-1">
+  <button class="drop-down-1__btn btn-reset">
+    <span>Продукция</span>
+    <svg width="7" height="4" viewBox="0 0 7 4" fill="none">
+      <use xlink:href="img/sprite.svg#arrowDrop1"></use>
+    </svg>
+  </button>
+  <div class="drop-down-1__box">
+    <button class="drop-down-1__btn-back btn-reset">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <use xlink:href="img/sprite.svg#arrowBackMenu"></use>
+      </svg>
+      <span>Назад в меню</span>
+    </button>
+    <ul class="drop-down-1__list list-reset">
+      <li>
+        <a class="nav-link" href="#">Приборы учета электрической энергии</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#">Счетчики воды</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#">Приборы учёта газа</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#">Коммуникационное оборудование</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#">Зарядные станции</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#">Микроконтроллеры</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#">Вспомогательные устройства</a>
+      </li>
+    </ul>
+  </div>
+</div>
+              </li>
+              <li>
+                <a class="nav-link" href="#">Пресс-центр</a>
+              </li>
+              <li>
+                <a class="nav-link" href="#">Карьера</a>
+              </li>
+              <li>
+                <a class="nav-link" href="#">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+      <div class="header__right">
+        <div class="switcher">
+  <label class="switcher__label">
+    <input class="switcher__input" type="checkbox" id="languageTogg">
+    <span class="switcher__status">
+      <i>Ru</i>
+      <i>En</i>
+    </span>
+  </label>
+</div>
+        <button class="burger btn-reset" id="burger">
+  <span class="burger__icon">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+      <use xlink:href="img/sprite.svg#burger"></use>
+    </svg>
+  </span>
+
+  <span class="burger__close">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+      <use xlink:href="img/sprite.svg#burgerClose"></use>
+    </svg>
+  </span>
+</button>
+      </div>
+    </div>
+  </div>
+</header>
+  <main class="main">
+    <div class="path">
+  <div class="container">
+    <ul class="path__list list-reset">
+      <li>
+        <a href="/">Главная страница</a>
+      </li>
+      <li>
+        <a href="#">Карьера</a>
+      </li>
+    </ul>
+    <div class="path__box-back">
+      <a class="path__link-back" href="#">
+        <svg width="28" height="12" viewBox="0 0 28 12" fill="none">
+          <use xlink:href="img/sprite.svg#arrBack"></use>
+        </svg>
+        <span class="text">Вернуться назад</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+    <section class="box-open-jop section">
+  <div class="box-open-jop__container container">
+    <div class="box-open-jop__content">
+      <div class="box-open-jop__line-top section-line-top">
+        <h2 class="box-open-jop__title section-title">
+          Карьера
+        </h2>
+      </div>
+      <div class="box-open-jop__swiper">
+        <div class="open-jop-swiper swiper">
+  <div class="open-jop-swiper__btn-group">
+    <button class="btn-reset swiper-btn swiper-btn-next">
+  <svg width="18" height="12" viewBox="0 0 18 12" fill="none">
+    <use xlink:href="img/sprite.svg#arrSwBtNext"></use>
+  </svg>
+</button>
+    <button class="btn-reset swiper-btn swiper-btn-prev">
+  <svg width="18" height="12" viewBox="0 0 18 12" fill="none">
+    <use xlink:href="img/sprite.svg#arrSwBtPrev"></use>
+  </svg>
+</button>
+  </div>
+  <ul class="swiper-wrapper list-reset">
+    <li class="swiper-slide">
+      <div class="card-open-jop">
+        <div class="card-open-jop__box-img">
+          <picture><source srcset="img/open-jop-swiper/1.webp" type="image/webp"><img class="card-open-jop__img" src="img/open-jop-swiper/1.jpg" alt="img"></picture>
+          <p class="card-open-jop__desc">Хотите вместе с нами создавать будущее?</p>
+        </div>
+      </div>
+    </li>
+    <li class="swiper-slide">
+      <div class="card-open-jop">
+        <div class="card-open-jop__box-img">
+          <picture><source srcset="img/open-jop-swiper/2.webp" type="image/webp"><img class="card-open-jop__img" src="img/open-jop-swiper/2.jpg" alt="img"></picture>
+          <p class="card-open-jop__desc">Хотите вместе с нами создавать будущее Хотите вместе с нами создавать будущее Хотите вместе с нами создавать будущее Хотите вместе с нами создавать ами создавать будущее Хотите вместе  будущее?</p>
+        </div>
+      </div>
+    </li>
+    <li class="swiper-slide">
+      <div class="card-open-jop">
+        <div class="card-open-jop__box-img">
+          <picture><source srcset="img/open-jop-swiper/3.webp" type="image/webp"><img class="card-open-jop__img" src="img/open-jop-swiper/3.jpg" alt="img"></picture>
+          <p class="card-open-jop__desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda odit molestiae quaerat impedit perferendis voluptatibus porro architecto. Illo, nisi dolore neque rem, obcaecati voluptatum quo eos quod, atque cumque a!</p>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <section class="box-welcome section">
+  <div class="box-welcome__conainer container">
+    <div class="box-welcome__content">
+      <h2 class="box-welcome__title section-title">Добро пожаловать в команду «НАРТИС»</h2>
+      <div class="box-welcome__info">
+        <p>
+          Работа у нас — это не только стабильный доход и уверенность в завтрашнем дне. Это возможность развиваться, реализовывать свои идеи и быть частью команды, которая меняет будущее энергетики.
+        </p>
+        <p>
+          Мы — лидеры в производстве интеллектуальных приборов учёта и разработчики решений, которые делают энергетику умной, надёжной и эффективной.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <section class="box-work section">
+  <div class="box-work__container container">
+    <div class="box-work__line-title">
+      <h2 class="box-work__title section-title">
+        Работайте в «НАРТИС»
+      </h2>
+    </div>
+
+    <div class="box-work__contant">
+      <ul class="box-work__list list-reset">
+        <li class="card-1">
+          <div class="card-work">
+            <h3 class="card-work__title">
+              Инновации
+            </h3>
+            <p class="card-work__desc">
+              Мы не стоим на месте. Внедряем передовые технологии и открываем новые горизонты в сегменте энергетики.
+            </p>
+          </div>
+        </li>
+        <li class="card-2">
+          <div class="card-work">
+            <h3 class="card-work__title">
+              Развитие и обучение
+            </h3>
+            <p class="card-work__desc">
+              Опытные наставники, программы повышения квалификации, возможность расти — и профессионально, и личностно.
+            </p>
+          </div>
+        </li>
+        <li class="card-3">
+          <div class="card-work">
+            <h3 class="card-work__title">
+              Забота и поддержка
+            </h3>
+            <p class="card-work__desc">
+              Мы искренне заботимся о людях: предлагаем достойные условия труда, социальные гарантии и внимание
+              к каждому.
+            </p>
+          </div>
+        </li>
+        <li class="card-4">
+          <div class="card-work">
+            <h3 class="card-work__title">
+              Безопасность и экология
+            </h3>
+            <p class="card-work__desc">
+              Наша продукция и производство соответствуют высоким стандартам безопасности и экологичности.
+            </p>
+          </div>
+        </li>
+        <li class="card-5">
+          <div class="card-work">
+            <h3 class="card-work__title">
+              Корпоративная культура
+            </h3>
+            <p class="card-work__desc">
+              Живём не только работой: отмечаем праздники вместе, занимаемся спортом, поддерживаем друг друга и просто
+              умеем дружить.
+            </p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+    <section class="box-offer section">
+  <div class="box-offer__container container">
+    <div class="box-offer__contant">
+      <div class="box-offer__line-title">
+        <h2 class="section-title">
+          Что мы предлагаем?
+        </h2>
+      </div>
+      <ul class="box-offer__list list-reset">
+        <li>
+          <div class="card-offer">
+            <span class="icon">
+              <svg width="18" height="19" viewBox="0 0 18 19" fill="none">
+                <use xlink:href="img/sprite.svg#offerOk"></use>
+              </svg>
+            </span>
+            <p class="card-offer__desc">
+              Официальное оформление по ТК РФ
+            </p>
+          </div>
+        </li>
+        <li>
+          <div class="card-offer">
+            <span class="icon">
+              <svg width="18" height="19" viewBox="0 0 18 19" fill="none">
+                <use xlink:href="img/sprite.svg#offerOk"></use>
+              </svg>
+            </span>
+            <p class="card-offer__desc">
+              Современные, чистые и безопасные рабочие места на новом производстве
+            </p>
+          </div>
+        </li>
+        <li>
+          <div class="card-offer">
+            <span class="icon">
+              <svg width="18" height="19" viewBox="0 0 18 19" fill="none">
+                <use xlink:href="img/sprite.svg#offerOk"></use>
+              </svg>
+            </span>
+            <p class="card-offer__desc">
+              Обеспечение новой индивидуальной рабочей формой и необходимыми средствами индивидуальной защиты
+            </p>
+          </div>
+        </li>
+        <li>
+          <div class="card-offer">
+            <span class="icon">
+              <svg width="18" height="19" viewBox="0 0 18 19" fill="none">
+                <use xlink:href="img/sprite.svg#offerOk"></use>
+              </svg>
+            </span>
+            <p class="card-offer__desc">
+              Индексация зарплаты и премии каждый год
+            </p>
+          </div>
+        </li>
+        <li>
+          <div class="card-offer">
+            <span class="icon">
+              <svg width="18" height="19" viewBox="0 0 18 19" fill="none">
+                <use xlink:href="img/sprite.svg#offerOk"></use>
+              </svg>
+            </span>
+            <p class="card-offer__desc">
+              Добровольное медицинское страхование со стоматологическим обслуживанием и госпитализацией (государственные и коммерческие клиники города)
+            </p>
+          </div>
+        </li>
+        <li>
+          <div class="card-offer">
+            <span class="icon">
+              <svg width="18" height="19" viewBox="0 0 18 19" fill="none">
+                <use xlink:href="img/sprite.svg#offerOk"></use>
+              </svg>
+            </span>
+            <p class="card-offer__desc">
+              Ежедневная дотация на питание и оборудованные пункты приема питания
+            </p>
+          </div>
+        </li>
+        <li>
+          <div class="card-offer">
+            <span class="icon">
+              <svg width="18" height="19" viewBox="0 0 18 19" fill="none">
+                <use xlink:href="img/sprite.svg#offerOk"></use>
+              </svg>
+            </span>
+            <p class="card-offer__desc">
+              Бесплатный корпоративный транспорт до места работы и обратно
+            </p>
+          </div>
+        </li>
+        <li>
+          <div class="card-offer">
+            <span class="icon">
+              <svg width="18" height="19" viewBox="0 0 18 19" fill="none">
+                <use xlink:href="img/sprite.svg#offerOk"></use>
+              </svg>
+            </span>
+            <p class="card-offer__desc">
+              Материальная помощь в важных жизненных событиях (рождение ребёнка, свадьба, утрата близких)
+            </p>
+          </div>
+        </li>
+        <li>
+          <div class="card-offer">
+            <span class="icon">
+              <svg width="18" height="19" viewBox="0 0 18 19" fill="none">
+                <use xlink:href="img/sprite.svg#offerOk"></use>
+              </svg>
+            </span>
+            <p class="card-offer__desc">
+              Компенсации детского отдыха, подарки первоклассникам, новогодние презенты, юбилейные выплаты
+            </p>
+          </div>
+        </li>
+        <li>
+          <div class="card-offer">
+            <span class="icon">
+              <svg width="18" height="19" viewBox="0 0 18 19" fill="none">
+                <use xlink:href="img/sprite.svg#offerOk"></use>
+              </svg>
+            </span>
+            <p class="card-offer__desc">
+              Спортивный досуг: хоккей, волейбол, бег
+            </p>
+          </div>
+        </li>
+      </ul>
+      <div class="box-offer__box-desc"> 
+        <p>
+          С нами вы можете раскрыть свой потенциал и работать в компании, которой действительно важно развитие сотрудников.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <section class="box-employees section">
+  <div class="box-employees__container container">
+    <div class="box-employees__content">
+      <div class="left">
+        <div class="left__number">
+          <p class="left__main-desc">
+            950
+          </p>
+          <p class="left__desc">
+            Общее число сотрудников
+          </p>
+        </div>
+        <div class="left__number">
+          <p class="left__main-desc">
+            79<span>%</span>
+          </p>
+          <p class="left__desc">
+            Производственный персонал
+          </p>
+        </div>
+        <div class="left__number">
+          <p class="left__main-desc">
+            21<span>%</span>
+          </p>
+          <p class="left__desc">
+            Офисный персонал
+          </p>
+        </div>
+      </div>
+      <div class="right">
+        <div class="right__box-img">
+          <picture><source srcset="img/box-employees/decor.webp" type="image/webp"><img class="right__decor-img" src="img/box-employees/decor.jpg" alt="img"></picture>
+          <picture><source srcset="img/box-employees/1.webp" type="image/webp"><img class="right__main-img" src="img/box-employees/1.jpg" alt="img"></picture>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <section class="box-look section">
+  <div class="box-look__container container">
+    <div class="box-look__line-title">
+      <h2 class="section-title">
+        Мы ищем
+      </h2>
+    </div>
+    <div class="box-look__content">
+      <ul class="box-look__list list-reset">
+        <li>
+          <div class="card-loppk">
+            <div class="card-loppk__top">
+              <div class="card-loppk__box-icon">
+                <span class="icon">
+                  <img src="img/card-look/1.svg" alt="svg">
+                </span>
+              </div>
+              <div class="card-loppk__box-title">
+                <h3 class="card-loppk__title">
+                  Руководителей и специалистов   
+                </h3>
+              </div>
+            </div>
+            <div class="card-loppk__bottom">
+              <p class="card-loppk__desc">
+                Управленцев с опытом, которые знают производственные процессы и умеют работать с командой.
+              </p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="card-loppk">
+            <div class="card-loppk__top">
+              <div class="card-loppk__box-icon">
+                <span class="icon">
+                  <img src="img/card-look/2.svg" alt="svg">
+                </span>
+              </div>
+              <div class="card-loppk__box-title">
+                <h3 class="card-loppk__title">
+                  Инженеров
+                </h3>
+              </div>
+            </div>
+            <div class="card-loppk__bottom">
+              <p class="card-loppk__desc">
+                Тех, кто разрабатывает, внедряет и совершенствует технологии.
+              </p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="card-loppk">
+            <div class="card-loppk__top">
+              <div class="card-loppk__box-icon">
+                <span class="icon">
+                  <img src="img/card-look/3.svg" alt="svg">
+                </span>
+              </div>
+              <div class="card-loppk__box-title">
+                <h3 class="card-loppk__title">
+                  IT-специалистов
+                </h3>
+              </div>
+            </div>
+            <div class="card-loppk__bottom">
+              <p class="card-loppk__desc">
+                Разработчиков, тестировщиков, специалистов по поддержке — всё, что делает нашу цифровую инфраструктуру стабильной.
+              </p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="card-loppk">
+            <div class="card-loppk__top">
+              <div class="card-loppk__box-icon">
+                <span class="icon">
+                  <img src="img/card-look/4.svg" alt="svg">
+                </span>
+              </div>
+              <div class="card-loppk__box-title">
+                <h3 class="card-loppk__title">
+                  Производственный персонал
+                </h3>
+              </div>
+            </div>
+            <div class="card-loppk__bottom">
+              <p class="card-loppk__desc">
+                Ответственных, внимательных и энергичных сотрудников на производственные линии.
+              </p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="card-loppk">
+            <div class="card-loppk__top">
+              <div class="card-loppk__box-icon">
+                <span class="icon">
+                  <img src="img/card-look/5.svg" alt="svg">
+                </span>
+              </div>
+              <div class="card-loppk__box-title">
+                <h3 class="card-loppk__title">
+                  Молодых специалистов
+                </h3>
+              </div>
+            </div>
+            <div class="card-loppk__bottom">
+              <p class="card-loppk__desc">
+                Начинаете карьеру? У нас есть место, где можно научиться, вырасти и проявить себя.
+              </p>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+    <section class="box-feedback-jop section">
+  <div class="box-feedback-jop__container container">
+    <div class="box-feedback-jop__content">
+      <div class="box-feedback-jop__wrapper">
+        <p>
+          НАРТИС — это место, где ценят людей, идеи и результаты.
+        </p>
+        <span>
+          Будем рады видеть вас в нашей команде!
+        </span>
+      </div>
+      <button class="box-feedback-jop__btn btn-reset" href="#">
+        Отправить резюме
+      </button>
+
+      <div class="box-feedback__popup-modal popup-modal">
+        <div class="popup-modal__window">
+          <div class="box-feedback__modal-scroll">
+            <div>
+              <div class="box-feedback-jop__window-info">
+                <h3 class="box-feedback-jop__window-title">
+                  Выберите удобный способ отправки резюме
+                </h3>
+                <div class="box-feedback-jop__group-links">
+                  <a class="box-feedback-jop__window-link" href="#">
+                    <img src="img/box-feedback-jop/hh.svg" alt="img">
+                    <span class="text">Отправить через hh.ru</span>
+                  </a>
+                  <a class="box-feedback-jop__window-link" href="#">
+                    <img src="img/box-feedback-jop/avito.svg" alt="img">
+                    <span class="text">Отправить через Avito</span>
+                  </a>
+                  <a class="box-feedback-jop__window-link" href="mailto:">
+                    <img src="img/box-feedback-jop/mail.svg" alt="img">
+                    <span class="text">Написать нам на e-mail</span>
+                  </a>
+                </div>
+              </div>
+              <button class="btn-download__close btn-reset close">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <use xlink:href="img/sprite.svg#closeDownload"></use>
+                </svg>
+                <span class="text">Закрыть</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  </main>
+  <footer class="footer" id="footer">
+  <div class="footer__container container">
+    <div class="footer__line-top">
+      <!--<ul class="box-logo list-reset">
+  <li>
+    <a href="/">
+      <svg width="169" height="32" viewBox="0 0 169 32" fill="none">
+        <use xlink:href="img/sprite.svg#mainLogo"></use>
+      </svg>
+    </a>
+  </li>
+  <li>
+    <a href="/">
+      <svg width="104" height="34" viewBox="0 0 104 34" fill="none">
+        <use xlink:href="img/sprite.svg#nekLogo"></use>
+      </svg>
+    </a>
+  </li>
+</ul>-->
+<div class="box-logo-new">
+  <a class="box-logo-new_nek" href="/"></a>
+  <a class="box-logo-new_natr" href="/"></a>
+  <img src="img/logo/logoNEW.svg" alt="logo">
+</div>
+      <!--
+      тут не совсем понятно что делать с меню, если это будет один компонент с тем что в хедере то можно вставить разметку из хедера, но тогда не понятно что делать с пыавдающим списком. Спили прописаны на оба меню (на меню из хедера и на новое которое только к футеру относится)
+      -->
+      <!--
+      <nav class="header__nav">
+        <ul class="header__list list-reset">
+          <li>
+            <a class="nav-link" href="#">О предприятии</a>
+          </li>
+          <li>
+            <div class="drop-down-1">
+  <button class="drop-down-1__btn btn-reset">
+    <span>Продукция</span>
+    <svg width="7" height="4" viewBox="0 0 7 4" fill="none">
+      <use xlink:href="img/sprite.svg#arrowDrop1"></use>
+    </svg>
+  </button>
+  <div class="drop-down-1__box">
+    <button class="drop-down-1__btn-back btn-reset">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <use xlink:href="img/sprite.svg#arrowBackMenu"></use>
+      </svg>
+      <span>Назад в меню</span>
+    </button>
+    <ul class="drop-down-1__list list-reset">
+      <li>
+        <a class="nav-link" href="#">Приборы учета электрической энергии</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#">Счетчики воды</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#">Приборы учёта газа</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#">Коммуникационное оборудование</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#">Зарядные станции</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#">Микроконтроллеры</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#">Вспомогательные устройства</a>
+      </li>
+    </ul>
+  </div>
+</div>
+          </li>
+          <li>
+            <a class="nav-link" href="#">Пресс-центр</a>
+          </li>
+          <li>
+            <a class="nav-link" href="#">Карьера</a>
+          </li>
+          <li>
+            <a class="nav-link" href="#">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+      -->
+
+      <nav class="footer__nav">
+        <ul class="footer__list list-reset">
+          <li>
+            <a class="nav-link" href="#">О предприятии</a>
+          </li>
+          <li>
+            <a class="nav-link" href="#">Продукция</a>
+          </li>
+          <li>
+            <a class="nav-link" href="#">Пресс-центр</a>
+          </li>
+          <li>
+            <a class="nav-link" href="#">Карьера</a>
+          </li>
+          <li>
+            <a class="nav-link" href="#">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+
+
+      <address class="footer__box-address">
+        <h3 class="footer__caption">
+          Производство:
+        </h3>
+        <a href="https://yandex.ru/maps/968/cherepovets/house/severnoye_shosse_40v/Z04YfgZgSUUOQFtjfX13cXlrZg==/?ll=37.810010%2C59.160582&z=17.3"
+          class="footer__top-link">
+          Вологодская область, г. Череповец, Северное шоссе, 40В
+        </a>
+      </address>
+
+    </div>
+    <div class="footer__line-bottom">
+      <div class="footer__bottom-left">
+        <p class="footer__desc">
+          © 2025
+        </p>
+        <a href="#" class="footer__bottom-link">
+          Все права защищены
+        </a>
+        <a href="#" class="footer__bottom-link">
+          Политика в области обработки персональных данных
+        </a>
+      </div>
+      <div class="footer__bottom-right">
+        <a href="https://x2digital.ru/" class="linkX2">
+          <svg width="144" height="28" viewBox="0 0 144 28" fill="none">
+            <use xlink:href="img/sprite.svg#x2"></use>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

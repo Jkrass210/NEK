@@ -28,11 +28,41 @@
     &:focus-visible {
       outline: 1px solid var(--gray-150);
     }
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.box-logo-new {
+  position: relative;
+  display: flex;
+  max-height: 40px;
+  img {
+    display: flex;
+  }
+  a {
+    position: absolute;
+    display: flex;
+    &.box-logo-new_nek {
+      inset: 0 0 40% 0;
+    }
+    &.box-logo-new_natr {
+      inset: 60% 0 0 0;
+    }
+    &:focus,&:focus-visible {
+      outline: none;
+    }
   }
 }
 
 @media (max-width: 1100px) {
   .box-logo {
+    a {
+      img {
+        max-width: 240px;
+      }
+    }
     li {
       &:first-child {
         padding-right: 16px;
@@ -56,6 +86,11 @@
 
 @media (max-width: 550px) {
   .box-logo {
+    a {
+      img {
+        max-width: 200px;
+      }
+    }
     li {
       &:first-child {
         padding-right: 10px;

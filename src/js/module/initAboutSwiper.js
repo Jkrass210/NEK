@@ -1,4 +1,4 @@
-export const initAboutSwiper = () => {
+/*export const initAboutSwiper = () => {
   document.addEventListener('DOMContentLoaded', function () {
     // Сначала инициализируем слайдер превью
     const aboutSwiperBottom = new Swiper('.about-swiper-bottom', {
@@ -24,6 +24,20 @@ export const initAboutSwiper = () => {
       thumbs: {
         swiper: aboutSwiperBottom
       }
+    });
+  });
+}
+*/
+export const initAboutSwiper = () => {
+  document.addEventListener('DOMContentLoaded', function () {
+    const aboutSwiperTop = new Swiper('.about-swiper-top', {
+      loop: false,
+      slidesPerView: 1,
+      spaceBetween: 12,
+      navigation: {
+        nextEl: '.about-swiper .swiper-btn-prev',
+        prevEl: '.about-swiper .swiper-btn-next',
+      },
     });
   });
 }  

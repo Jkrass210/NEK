@@ -5,7 +5,7 @@
     width: 100%;
     padding: 14px 32px;
     display: flex;
-    gap: 20px;
+    gap: 5px;
     align-items: center;
     justify-content: space-between;
     background-color: var(--gray-100);
@@ -16,6 +16,7 @@
       font-weight: 400;
       font-size: 20px;
       line-height: 140%;
+      text-align: start;
       color: var(--black);
     }
     .icon {
@@ -99,11 +100,95 @@
     justify-content: center;
     background-color: var(--white);
     transition: background-color 0.4s ease-in-out;
+    span.text {
+      display: none;
+    }
     &:focus,&:focus-visible {
       outline: none;
     }
     &:focus-visible,&:hover,&:active {
       background-color: var(--gray-100);
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .btn-download {
+    &__btn {
+      padding: 14px 24px;
+      .text {
+        font-size: 17px;
+        line-height: 165%;
+      }
+      .icon {
+        width: 32px;
+        min-width: 32px;
+        height: 32px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .btn-download {
+    &__close {
+      width: 100%;
+      top: calc(100% + 4px);
+      left: 0;
+      right: 0;
+      height: auto;
+      padding: 14px;
+      svg {
+        display: none;
+      }
+      span.text {
+        display: flex;
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        color: var(--black);
+      }
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .btn-download {
+    &__btn {
+      border-radius: 16px;
+      padding: 14px 20px;
+      .text {
+        font-size: 16px;
+        line-height: 175%;
+      }
+      .icon {
+        width: 24px;
+        min-width: 24px;
+        height: 24px;
+        svg {
+          width: 14px;
+          height: 10px;
+        }
+      }
+    }
+
+    .popup-modal {
+      &__window {
+        padding: 20px;
+      }
+    }
+
+    &__list-links {
+      gap: 6px;
+    }
+
+    &__link {
+      padding: 12px 20px;
+      .text {
+        font-size: 16px;
+        line-height: 131%;
+      }
     }
   }
 }

@@ -11,7 +11,16 @@
     justify-content: space-between;
     border-bottom: 1px solid #908f8f45;
   }
+  .box-logo-new {
+    width: 200px;
+    max-height: 100%;
+  }
   .box-logo {
+    a {
+      img {
+        max-width: 100%;
+      }
+    }
     li {
       &:last-child {
         &::after {
